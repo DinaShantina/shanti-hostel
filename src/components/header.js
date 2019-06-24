@@ -2,16 +2,7 @@ import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import headerStyles from "./header.module.scss"
 import Logo from "../logo.jpg"
-import {
-  Navbar,
-  Nav,
-  Button,
-  Form,
-  FormControl,
-  NavDropdown,
-} from "react-bootstrap"
-
-import Collapse from "react-bootstrap/Collapse"
+import { Navbar, Nav, Button, Form } from "react-bootstrap"
 
 const Header = () => {
   const data = useStaticQuery(graphql`
