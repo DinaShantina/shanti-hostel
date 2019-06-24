@@ -2,7 +2,6 @@ import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import headerStyles from "./header.module.scss"
 import Logo from "../logo.jpg"
-import Travel from "../travel.png"
 
 const Header = () => {
   const data = useStaticQuery(graphql`
@@ -18,7 +17,7 @@ const Header = () => {
     <header className={headerStyles.header}>
       <h1>
         <Link className={headerStyles.title} to="/">
-          <img src={Logo} />
+          <img className={headerStyles.mainImage} src={Logo} />
           {/* {data.site.siteMetadata.title} */}
         </Link>
       </h1>

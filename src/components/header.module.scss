@@ -1,22 +1,21 @@
 .header {
-  padding: 1rem 0 3rem;
+  padding: 1rem 0 0 0;
 }
 .title {
   color: #000000;
   font-size: 3rem;
   text-decoration: none;
 }
-
+.mainImage {
+  width: 90%;
+  margin: 0 auto;
+}
 .nav-list {
   display: flex;
   justify-content: space-around;
   align-items: center;
   list-style-type: none;
   margin: 0;
-  // border: 1px solid lightgrey;
-  // border-radius: 3px;
-  // opacity: 0.6;
-  // max-width: 750px;
   text-align: center;
   background-color: #767991;
 }
@@ -24,9 +23,7 @@
   color: #582c83;
   color: #ffffff;
   font-size: 0.9rem;
-  // margin-right: 1.3rem;
   text-decoration: none;
-  // padding: 0.7rem;
   text-align: center;
 }
 .nav-item:hover {
