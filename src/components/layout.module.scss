@@ -1,0 +1,32 @@
+.container {
+  margin: 0 auto;
+  max-width: 750px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #ffffff;
+}
+.imgHeader {
+  display: flex;
+  justify-content: flex-end;
+  // max-width: 750px;
+}
+.content {
+  flex-grow: 1;
+  padding: 1rem;
+}
+.all {
+  background-color: #582c83;
+  z-index: -1;
+}
+
+.pic {
+  // position: absolute;
+  // top: 196px;
+  // left: 800px;
+  width: 11rem;
+  z-index: 0;
+  opacity: 0.6;
+  z-index: 1;
+  margin-top: 1em;
+}
