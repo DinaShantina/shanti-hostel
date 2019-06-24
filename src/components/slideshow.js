@@ -5,8 +5,6 @@ import img2 from "../images/slides/slide2.jpg"
 import img3 from "../images/slides/slide3.jpg"
 import img4 from "../images/slides/slide4.jpg"
 import slideStyle from "./slideshow.module.scss"
-// import { useStaticQuery, graphql } from "gatsby"
-// import Img from "gatsby-image"
 
 const proprietes = {
   duration: 5000,
@@ -19,9 +17,9 @@ const Slideshow = () => {
   return (
     <div className="containerSlide" className={slideStyle.slider}>
       <Slide {...proprietes}>
-        <div className="each-slide">
+        <div>
           <div>
-            <img src={img1} alt="img1" />
+            <img className={slideStyle.eachslide} src={img1} alt="img1" />
           </div>
         </div>
         <div className="each-slide">

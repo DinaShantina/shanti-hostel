@@ -3,7 +3,6 @@ import Header from "./header"
 import Footer from "./footer"
 import "../styles/index.scss"
 import layoutStyle from "./layout.module.scss"
-import Travel from "../travel.png"
 
 const Layout = props => {
   return (

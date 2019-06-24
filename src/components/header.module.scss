@@ -17,7 +17,7 @@
   list-style-type: none;
   margin: 0;
   text-align: center;
-  background-color: #767991;
+  // background-color: #767991;
 }
 .nav-item {
   color: #582c83;
@@ -36,9 +36,10 @@
 ul li {
   margin-bottom: 0;
   text-align: center;
-  padding: 0.5rem 0;
+  margin: 0.3rem 2rem 0.3rem 1.5rem;
   text-transform: uppercase;
 }
+
 .bookhere {
   font-size: 2rem;
   display: inline-block;
@@ -50,7 +51,8 @@ ul li {
   border: none;
   padding: 1rem;
   color: white;
-  animation: shadow-pulse 1s infinite;
+  border-bottom: 2px solid #f9dd00;
+  // animation: shadow-pulse 1s infinite;
 }
 .flexlink {
 }
@@ -65,7 +67,7 @@ ul li {
     box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
   }
   100% {
-    box-shadow: 0 0 0 25px rgba(0, 0, 0, 0);
+    box-shadow: 0 0 0 5px rgba(0, 0, 0, 0);
   }
 }
 
