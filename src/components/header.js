@@ -15,13 +15,14 @@ const Header = () => {
   `)
   return (
     <header className={headerStyles.header}>
-      <h1>
-        <Link className={headerStyles.title} to="/">
-          <img className={headerStyles.mainImage} src={Logo} />
-          {/* {data.site.siteMetadata.title} */}
+      <Link className={headerStyles.title} to="/">
+        <img className={headerStyles.mainImage} src={Logo} />
+        <Link className={headerStyles.linkbook} to="/booking">
+          <button className={headerStyles.bookhere}>Book Here</button>
         </Link>
-      </h1>
 
+        {/* {data.site.siteMetadata.title} */}
+      </Link>
       <nav>
         <ul className={headerStyles.navList}>
           <li>
