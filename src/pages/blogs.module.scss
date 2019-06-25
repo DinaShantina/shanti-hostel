@@ -1,6 +1,10 @@
 .posts {
   list-style-type: none;
   margin: 0;
+  padding: 1rem;
+}
+h1 {
+  padding: 1rem;
 }
 
 .post {
@@ -23,5 +27,22 @@
     color: #777777;
     font-size: 0.8rem;
     font-style: italic;
+  }
+}
+
+// ABOUT PAGE
+
+.about-style {
+  padding: 1rem;
+}
+.hoscar {
+  background-color: #313131;
+  border-top: 2px solid white;
+  img {
+    width: 40%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    border: none;
   }
 }
