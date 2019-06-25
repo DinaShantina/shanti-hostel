@@ -1,5 +1,5 @@
 import React from "react"
-import toolbarStyle from "./toolbar.module.scss"
+import toolbarStyle from "./Toolbar.module.scss"
 import { Link } from "gatsby"
 import DrawerToggleButton from "../SiderDrawer/DrawerToggleButton"
 // import Logo from "../shanti.png"
