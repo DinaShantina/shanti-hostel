@@ -3,7 +3,7 @@ import Header from "./header"
 import Footer from "./footer"
 import "../styles/index.scss"
 import layoutStyle from "./layout.module.scss"
-import Toolbar from "./Toolbar/ToOlbar.js"
+import Toolbar from "./Toolbar/Toolbar.js"
 import SideDrawer from "./SiderDrawer/SideDrawer"
 import Backdrop from "./Backdrop/Backdrop"
 
