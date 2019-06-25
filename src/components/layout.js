@@ -32,7 +32,7 @@ class Layout extends React.Component {
           <SideDrawer show={this.state.siderDrawerOpen} />
           {backdrop}
 
-          <main style={{ marginTop: "64px" }}>
+          <main>
             <div className={layoutStyle.content}>{this.props.children}</div>
           </main>
           <Footer />
