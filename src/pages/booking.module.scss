@@ -1,0 +1,25 @@
+.booking-form {
+  background-color: transparent;
+  color: #521751;
+  border: 2px solid #521751;
+  border-radius: 10px;
+  padding: 2rem;
+  width: 50%;
+  margin-top: 4rem;
+  input,
+  option {
+    margin-left: 1rem;
+  }
+  button {
+    background-color: #521751;
+    color: #f9dd00;
+    border: none;
+    margin-top: 1rem;
+    width: 100%;
+    border-radius: 10px;
+  }
+}
+.flex-form {
+  display: flex;
+  justify-content: center;
+}
