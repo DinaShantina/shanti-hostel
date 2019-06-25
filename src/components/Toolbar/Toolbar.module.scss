@@ -1,0 +1,69 @@
+.toolbar {
+  width: 100%;
+  //   position: fixed;
+  height: 56px;
+  background-color: #521751;
+}
+
+.toolbarNav {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 1rem;
+}
+.nav-item {
+  text-decoration: none;
+  color: white;
+}
+.toolItems {
+  button {
+    color: #f9dd00;
+    background-color: transparent;
+    border: 1px solid #f9dd00;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.toologonav {
+  list-style: none;
+  color: white;
+  text-decoration: none;
+}
+.toolLogo {
+  margin-left: 1rem;
+}
+.nav-item:hover {
+  color: #f9dd00;
+}
+.active-nav-item {
+  color: #f9dd00;
+}
+.space {
+  flex-grow: 1;
+}
+ul li {
+  color: #ffffff;
+  font-size: 0.9rem;
+  list-style: none;
+  text-align: center;
+  padding: 0 1rem;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .nav-item {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .tool-toggle-button {
+    display: none;
+  }
+}

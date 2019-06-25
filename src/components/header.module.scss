@@ -1,6 +1,6 @@
-.header {
-  padding: 1rem 0 0 0;
-}
+// .header {
+//   padding: 1rem 0 0 0;
+// }
 .title {
   color: #000000;
   font-size: 3rem;
@@ -17,8 +17,9 @@
   list-style-type: none;
   margin: 0;
   text-align: center;
-  // background-color: #767991;
+  background-color: #767991;
 }
+
 .nav-item {
   color: #582c83;
   color: #ffffff;
@@ -33,12 +34,12 @@
 .active-nav-item {
   color: #f9dd00;
 }
-ul li {
-  margin-bottom: 0;
-  text-align: center;
-  margin: 0.3rem 2rem 0rem 1.5rem;
-  text-transform: uppercase;
-}
+// ul li {
+//   margin-bottom: 0;
+//   text-align: center;
+//   margin: 0.3rem 2rem 0rem 1.5rem;
+//   text-transform: uppercase;
+// }
 
 .bookhere {
   font-size: 2rem;

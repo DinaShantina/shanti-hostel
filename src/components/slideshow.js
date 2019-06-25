@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import { Slide } from "react-slideshow-image"
 import img1 from "../images/slides/slide1.jpg"
 import img2 from "../images/slides/slide2.jpg"
