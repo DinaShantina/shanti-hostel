@@ -10,7 +10,35 @@
     margin-bottom: -3px;
   }
 }
-
+.logo {
+  position: relative;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  img {
+    width: 50%;
+  }
+}
 .padx {
   padding: 1rem;
+}
+.icons {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  // background-color: grey;
+  a {
+    // align-items: center;
+    font-size: 2rem;
+    color: #521751;
+  }
+  a:hover {
+    color: #f9dd00;
+  }
 }
