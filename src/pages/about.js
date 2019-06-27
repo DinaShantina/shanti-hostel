@@ -4,11 +4,41 @@ import Layout from "../components/layout"
 import Head from "../components/head"
 import blogStyles from "./blogs.module.scss"
 import Hoscar from "../Hoscar.jpg"
+// import { Slide } from "react-slideshow-image"
+// import img1 from "../images/slides1/Hoscar.jpg"
+// import img2 from "../images/slides1/Hoscar1.jpg"
+// import img3 from "../images/slides1/Hoscar2.jpg"
 
+// const proprietes = {
+//   duration: 5000,
+//   transitionDuration: 500,
+//   infinite: true,
+//   indicators: true,
+//   arrows: true,
+// }
 const AboutPage = () => {
   return (
     <Layout>
       <Head title="About" />
+      {/* <div className="containerSlide" className={blogStyles.slider}>
+        <Slide {...proprietes}>
+          <div>
+            <div>
+              <img className={blogStyles.eachslide} src={img1} alt="img1" />
+            </div>
+          </div>
+          <div className="each-slide">
+            <div>
+              <img src={img2} alt="img2" />
+            </div>
+          </div>
+          <div className="each-slide last">
+            <div>
+              <img src={img3} alt="img3" />
+            </div>
+          </div>
+        </Slide>
+      </div> */}
       <div className={blogStyles.hoscar}>
         <img src={Hoscar} className={blogStyles.hoscar} />
       </div>

@@ -57,7 +57,11 @@
     align-items: center;
   }
 }
-
+.icons {
+  a:hover {
+    color: $yellow;
+  }
+}
 .toologonav {
   list-style: none;
   color: white;

@@ -1,7 +1,7 @@
 .booking-form {
-  background-color: #521751;
+  background-color: #582c83;
   color: white;
-  border: 2px solid #521751;
+  border: 2px solid #582c83;
   //   border-radius: 10px;
   padding: 1rem;
   width: 50%;
@@ -22,6 +22,7 @@
   }
   .date {
     display: flex;
+    justify-content: space-between;
     // flex-direction: column;
   }
   hr {
