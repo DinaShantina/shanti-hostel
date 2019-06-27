@@ -1,39 +1,74 @@
+@import "../variable.scss";
+
 .toolbar {
   width: 100%;
   //   position: fixed;
-  height: 56px;
-  background-color: #521751;
+  //   height: 56px;
+  background-color: $violate;
+  .icons {
+    height: 100%;
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    box-sizing: border-box;
+    display: flex;
+    // flex-direction: column;
+
+    a {
+      color: white;
+      margin: 0 0.4rem;
+      font-size: 1.3rem;
+    }
+  }
 }
 
 .toolbarNav {
   display: flex;
+  //   justify-content: space-around;
   align-items: center;
   height: 100%;
-  padding: 0 1rem;
+  padding: 0 0.4rem;
 }
+
 .nav-item {
   text-decoration: none;
   color: white;
 }
 .toolItems {
   button {
+    white-space: nowrap;
     color: #f9dd00;
     background-color: transparent;
-    border: 1px solid #f9dd00;
+    border: 1.8px solid #f9dd00;
     border-radius: 10px;
     cursor: pointer;
   }
+  button:hover {
+    background-color: $yellow;
+    color: $violate;
+    transition-duration: 0.5s;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    //   justify-content: center;
+    align-items: center;
+  }
 }
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
+
 .toologonav {
   list-style: none;
   color: white;
   text-decoration: none;
+  img {
+    width: 50px;
+    margin: 0;
+    // border: 1px solid white;
+    border-radius: 50px;
+    padding: 0;
+  }
 }
 .toolLogo {
   margin-left: 1rem;

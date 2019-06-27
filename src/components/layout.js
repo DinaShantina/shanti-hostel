@@ -31,7 +31,6 @@ class Layout extends React.Component {
           <Toolbar drawerClickHandler={this.drawerToggleClickHandler} />
           <SideDrawer show={this.state.siderDrawerOpen} />
           {backdrop}
-
           <main>
             <div className={layoutStyle.content}>{this.props.children}</div>
           </main>

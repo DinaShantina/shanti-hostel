@@ -1,10 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Ubuntu&display=swap");
+@import "variable.scss";
 
-html {
-  font-family: "Ubuntu", sans-serif;
-}
 body {
   font-family: "Ubuntu", sans-serif;
+  src: url("https://fonts.googleapis.com/css?family=Ubuntu&display=swap");
 }
 .container {
   margin: 0 auto;
@@ -13,9 +12,9 @@ body {
   flex-direction: column;
   min-height: 100vh;
   background-color: #ffffff;
-  -webkit-box-shadow: 0px 2px 5px 5px rgba(0, 0, 0, 0.23);
-  -moz-box-shadow: 0px 2px 5px 5px rgba(0, 0, 0, 0.23);
-  box-shadow: 0px 2px 5px 5px rgba(0, 0, 0, 0.23);
+  -webkit-box-shadow: -9px -9px 18px -8px rgba(0, 0, 0, 0.45);
+  -moz-box-shadow: -9px -9px 18px -8px rgba(0, 0, 0, 0.45);
+  box-shadow: -9px -9px 18px -8px rgba(0, 0, 0, 0.45);
 }
 .imgHeader {
   display: flex;
@@ -24,10 +23,10 @@ body {
 }
 .content {
   flex-grow: 1;
-  // padding: 1rem;
+  min-height: calc(100vh - 82px);
 }
 .all {
-  background-color: #582c83;
+  background-color: #d3d3d3;
   z-index: -1;
 }
 

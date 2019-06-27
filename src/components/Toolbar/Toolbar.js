@@ -3,7 +3,8 @@ import toolbarStyle from "./Toolbar.module.scss"
 import { Link } from "gatsby"
 import DrawerToggleButton from "../SiderDrawer/DrawerToggleButton"
 // import Logo from "../shanti.png"
-// import Logo from "../shanti.png"
+import Logo from "../../shantiA.png"
+import { FaFacebook, FaInstagram } from "react-icons/fa"
 
 // import img1 from "../images/slides/slide1.jpg"
 
@@ -17,8 +18,8 @@ const Toolbar = props => {
         </div>
         <div className={toolbarStyle.toolLogo}>
           <Link to="/" className={toolbarStyle.toologonav}>
-            Shanti Hostel
-            {/* <img src={Logo} alt="logo" /> */}
+            {/* Shanti Hostel */}
+            <img src={Logo} alt="logo" />
           </Link>
         </div>
 
@@ -76,10 +77,20 @@ const Toolbar = props => {
                 activeClassName={toolbarStyle.activeNavItem}
                 to="/booking"
               >
-                <button> BOOK NOW</button>
+                <button className={toolbarStyle.one}>
+                  <div className={toolbarStyle.insider}>BOOK NOW</div>
+                </button>
               </Link>
             </li>
           </ul>
+        </div>
+        <div className={toolbarStyle.icons}>
+          <a href="https://www.facebook.com/shantihostels/" target="__blank">
+            <FaFacebook />
+          </a>
+          <a href="https://www.instagram.com/shantihostel/" target="__blank">
+            <FaInstagram />
+          </a>
         </div>
       </nav>
     </div>
