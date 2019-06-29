@@ -6,15 +6,15 @@
   padding: 1rem;
   width: 50%;
   margin-top: 4rem;
-  //   input,
-  //   option {
-  //     margin-left: 1rem;
-  //   }
+  input,
+  select {
+    margin-bottom: 1rem;
+  }
   button {
     background-color: #f9dd00;
     color: #521751;
     border: none;
-    margin-top: 2rem;
+    // margin-top: 2rem;
     width: 100%;
   }
   .field input {

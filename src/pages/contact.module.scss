@@ -42,3 +42,38 @@
     color: #f9dd00;
   }
 }
+.whats {
+  background-color: #665cac;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  margin-top: 1rem;
+  .book p:nth-child(1) {
+    font-size: 2rem;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .book p:nth-child(2) {
+    font-size: 2rem;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .book p:nth-child(3) {
+    font-size: 1rem;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .icon a {
+    font-size: 5rem;
+    margin: 0.4rem;
+    color: white;
+  }
+  .icon a:nth-child(1):hover {
+    color: #54c0d4;
+  }
+  .icon a:nth-child(2):hover {
+    color: #25d366;
+  }
+}
