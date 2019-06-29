@@ -31,7 +31,7 @@ const IndexPage = () => {
           <p>EASY, FAST &amp; ALWAYS THE BEST PRICE</p>
         </div>
       </div>
-      <p>
+      <p className={layoutStyle.accom}>
         Do you need accommodation? <Link to="/contact">Contact us</Link>
       </p>
     </Layout>
