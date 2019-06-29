@@ -61,7 +61,7 @@
   width: 50%;
 }
 
-@media (min-width: 426px) {
+@media (max-width: 426px) {
   .flex-form {
     width: 80%;
   }
