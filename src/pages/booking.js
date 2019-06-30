@@ -2,6 +2,10 @@ import React from "react"
 import Layout from "../components/layout"
 import Head from "../components/head"
 import bookingStyle from "./booking.module.scss"
+// import First from "../images/slides/slide1.jpg"
+// import Second from "../images/slides/slide2.jpg"
+// import Third from "../images/slides/slide3.jpg"
+// import Fourth from "../images/slides/slide4.jpg"
 
 class Booking extends React.Component {
   constructor() {
@@ -9,22 +13,29 @@ class Booking extends React.Component {
     this.state = {
       name: "",
       email: "",
-      persons: "",
-      room: "",
+      persons: 0,
+      room: 0,
       from: "",
       to: "",
       total: "",
-      cost: {
-        "8Bed": "9",
-        "4beda": "10",
-        "4bedb": "10",
-        double: "28",
-      },
     }
   }
+
   change = e => {
-    let date =
-      new Date(this.state.to).getTime() - new Date(this.state.from).getTime()
+    e.persist()
+    let oneDay = 1000 * 60 * 60 * 24
+    let date1 = new Date(this.state.to).getTime()
+    let date2 = new Date(this.state.from).getTime()
+    let date = date1 - date2
+    let finalDate = Math.round(date / oneDay)
+    this.setState(prevState => ({
+      [e.target.name]: e.target.value,
+      total: prevState.room * prevState.persons * finalDate + `€`,
+    }))
+  }
+  show = e => {}
+  onSubmit = e => {
+    e.preventDefault()
     if (
       this.state.name !== "" &&
       this.state.email !== "" &&
@@ -33,29 +44,16 @@ class Booking extends React.Component {
       this.state.from !== "" &&
       this.state.to !== ""
     ) {
-      this.state.total =
-        parseInt(this.state.cost[this.state.room]) * date * this.state.person
-      // ReactDOM.findDOMNode(<instance-of-outermost-component>).getElementsByClassName('snap')
+      this.setState({
+        name: "",
+        email: "",
+        persons: "",
+        room: "",
+        from: "",
+        to: "",
+        total: "",
+      })
     }
-    this.setState({
-      [e.target.name]: e.target.value,
-    })
-    console.log(this.state.total)
-  }
-
-  onSubmit = e => {
-    e.preventDefault()
-    // this.props.onSubmit()
-    console.log(this.state)
-    this.setState({
-      name: "",
-      email: "",
-      persons: "",
-      room: "",
-      from: "",
-      to: "",
-      total: "",
-    })
   }
   render() {
     return (
@@ -115,6 +113,7 @@ class Booking extends React.Component {
                 <option>10</option>
               </select>
             </div>
+            {/* <First /> */}
             <div>
               Room type?
               <br />
@@ -126,10 +125,18 @@ class Booking extends React.Component {
                 <option hidden selected>
                   Select type of room
                 </option>
-                <option value="8bed"> 8 bed Dorm</option>
-                <option value="4beda">4 yellow bed Dorm</option>
-                <option value="4bedb">4 orange bed Dorm</option>
-                <option value="double">Private Double Room</option>
+                <option name="8bed" value="10">
+                  8 bed Dorm
+                </option>
+                <option name="4beda" value="12">
+                  4 yellow bed Dorm
+                </option>
+                <option name="4bedb" value="11">
+                  4 orange bed Dorm
+                </option>
+                <option name="double" value="25">
+                  Private Double Room
+                </option>
               </select>
             </div>
             <hr />
@@ -153,7 +160,7 @@ class Booking extends React.Component {
                 />
               </label>
             </div>
-            <p className={bookingStyle.total}>{this.state.total}EU</p>
+            <p className={bookingStyle.total}>{this.state.total} </p>
             <hr />
             <div>
               <button onClick={e => this.onSubmit(e)} type="submit">

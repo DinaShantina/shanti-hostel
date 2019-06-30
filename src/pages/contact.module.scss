@@ -80,3 +80,16 @@
 .accom {
   padding: 1rem;
 }
+@media (max-width: 768px) {
+}
+
+@media (min-width: 426px) {
+  .whats {
+    .book p:nth-child(1) {
+      font-size: 1.5rem;
+    }
+    .icon a {
+      font-size: 4rem;
+    }
+  }
+}

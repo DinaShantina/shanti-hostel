@@ -13,20 +13,21 @@
   background-color: #582c83;
   color: white;
   border: 2px solid #582c83;
-  //   border-radius: 10px;
   padding: 1rem;
   width: 100%;
   margin-top: 4rem;
-  input,
-  select {
+  input {
     margin-bottom: 1rem;
     width: 100%;
+  }
+  select {
+    margin-bottom: 1rem;
+    width: 50%;
   }
   button {
     background-color: #f9dd00;
     color: #521751;
     border: none;
-    // margin-top: 2rem;
     width: 100%;
   }
   .field input {
@@ -62,6 +63,9 @@
 }
 
 @media (max-width: 426px) {
+  select {
+    width: 100%;
+  }
   .flex-form {
     width: 80%;
   }
