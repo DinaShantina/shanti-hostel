@@ -2,9 +2,27 @@ import React, { Component } from "react"
 import Layout from "../components/layout"
 import Head from "../components/head"
 import ReactBnbGallery from "react-bnb-gallery"
+import GalleryA from "react-photo-gallery"
 // import Phone from "../phone.png"
 // src={require(`../src/images/covers/${this.state.details.cover}.jpg`)}
 const photos = [
+  {
+    src: "../slide1.jpg",
+    width: 4,
+    height: 3,
+  },
+  {
+    src: "../slide2.jpg",
+    width: 1,
+    height: 1,
+  },
+  {
+    src: "../slide3.jpg",
+    width: 1,
+    height: 1,
+  },
+]
+const photosA = [
   {
     photo: "../src/slide1.jpg",
     caption: "8 bed dormitory",
@@ -25,7 +43,7 @@ const photos = [
 class Gallery extends Component {
   constructor() {
     super(...arguments)
-    this.state = { galleryOpened: true }
+    this.state = { galleryOpened: false }
     this.toggleGallery = this.toggleGallery.bind(this)
   }
 
@@ -40,10 +58,11 @@ class Gallery extends Component {
       <Layout>
         <Head title="Gallery" />
         <div>
-          <button onClick={this.toggleGallery}>Open photo gallery</button>
+          <GalleryA onClick={this.toggleGallery} photos={photos} />
+          {/* <button onClick={this.toggleGallery}>Open photo gallery</button> */}
           <ReactBnbGallery
             show={this.state.galleryOpened}
-            photos={photos}
+            photos={photosA}
             onClose={this.toggleGallery}
           />
         </div>
