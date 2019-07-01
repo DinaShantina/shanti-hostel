@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 import Head from "../components/head"
 import bookingStyle from "./booking.module.scss"
-// import First from "../images/slides/slide1.jpg"
+import First from "../images/slides/slide1.jpg"
 // import Second from "../images/slides/slide2.jpg"
 // import Third from "../images/slides/slide3.jpg"
 // import Fourth from "../images/slides/slide4.jpg"
@@ -17,7 +17,7 @@ class Booking extends React.Component {
       room: 0,
       from: "",
       to: "",
-      total: "",
+      total: 0,
     }
   }
 
@@ -33,7 +33,15 @@ class Booking extends React.Component {
       total: prevState.room * prevState.persons * finalDate + `€`,
     }))
   }
-  show = e => {}
+  // show = e => {
+  //  var Comp = React.createClass({
+  // getInitialState: function(){
+  // 	return {hide: false};
+  // },
+  // toggle: function(){
+  // 	this.setState({hide: !this.state.hide});
+  // },
+  // }
   onSubmit = e => {
     e.preventDefault()
     if (
@@ -91,6 +99,16 @@ class Booking extends React.Component {
               />
             </div>
             <hr />
+            <img
+              src={First}
+              alt="8bed dorm"
+              style={{
+                width: "40%",
+                float: "right",
+                border: "1px solid white",
+                display: "none",
+              }}
+            />
             <div>
               How many people? <br />
               <select
@@ -113,11 +131,11 @@ class Booking extends React.Component {
                 <option>10</option>
               </select>
             </div>
-            {/* <First /> */}
+
             <div>
               Room type?
               <br />
-              <select
+              <select id="room"
                 name="room"
                 value={this.state.room}
                 onChange={e => this.change(e)}

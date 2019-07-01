@@ -57,6 +57,15 @@ const Toolbar = props => {
               <Link
                 className={toolbarStyle.navItem}
                 activeClassName={toolbarStyle.activeNavItem}
+                to="/gallery"
+              >
+                Gallery &nbsp;
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={toolbarStyle.navItem}
+                activeClassName={toolbarStyle.activeNavItem}
                 to="/blog"
               >
                 Blog &nbsp;
