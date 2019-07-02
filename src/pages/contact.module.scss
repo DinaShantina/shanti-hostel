@@ -1,8 +1,12 @@
 @import "../components/variable.scss";
 .contact {
-  padding: 1rem;
+  // padding: 1rem;
   border-radius: 10px;
-  p {
+  .text {
+    padding: 1rem;
+    text-align: center;
+  }
+  .phone {
     a {
       color: $violate;
     }
@@ -12,6 +16,25 @@
   }
   h1 {
     padding: 0;
+  }
+}
+.staff {
+  margin-bottom: -7px;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+.reach {
+  background-color: $violate;
+  color: white;
+  padding: 2rem 1rem;
+  font-size: 2.5rem;
+  text-align: center;
+  a {
+    color: $yellow;
+    text-decoration: none;
+  }
+  a:hover {
+    color: red;
   }
 }
 .logo {
@@ -36,9 +59,7 @@
   flex-direction: column;
   justify-content: space-evenly;
   padding: 1rem;
-  // background-color: grey;
   a {
-    // align-items: center;
     font-size: 2rem;
     color: #521751;
   }

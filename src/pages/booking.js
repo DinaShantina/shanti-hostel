@@ -17,31 +17,38 @@ class Booking extends React.Component {
       room: 0,
       from: "",
       to: "",
-      total: 0,
+      total: "",
     }
   }
 
   change = e => {
     e.persist()
-    let oneDay = 1000 * 60 * 60 * 24
-    let date1 = new Date(this.state.to).getTime()
-    let date2 = new Date(this.state.from).getTime()
-    let date = date1 - date2
-    let finalDate = Math.round(date / oneDay)
-    this.setState(prevState => ({
-      [e.target.name]: e.target.value,
-      total: prevState.room * prevState.persons * finalDate + `€`,
-    }))
+
+    this.setState(
+      {
+        [e.target.name]: e.target.value,
+      },
+      () => {
+        if (
+          this.state.room &&
+          this.state.persons &&
+          this.state.to &&
+          this.state.from
+        ) {
+          let oneDay = 1000 * 60 * 60 * 24
+          let date1 = new Date(this.state.to).getTime()
+          let date2 = new Date(this.state.from).getTime()
+          let date = date1 - date2
+          let finalDate = Math.round(date / oneDay)
+
+          this.setState({
+            total: this.state.room * this.state.persons * finalDate + `€`,
+          })
+        }
+      }
+    )
   }
-  // show = e => {
-  //  var Comp = React.createClass({
-  // getInitialState: function(){
-  // 	return {hide: false};
-  // },
-  // toggle: function(){
-  // 	this.setState({hide: !this.state.hide});
-  // },
-  // }
+
   onSubmit = e => {
     e.preventDefault()
     if (
@@ -135,7 +142,8 @@ class Booking extends React.Component {
             <div>
               Room type?
               <br />
-              <select id="room"
+              <select
+                id="room"
                 name="room"
                 value={this.state.room}
                 onChange={e => this.change(e)}

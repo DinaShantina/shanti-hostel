@@ -3,6 +3,7 @@ import Layout from "../components/layout"
 import Head from "../components/head"
 import ReactBnbGallery from "react-bnb-gallery"
 import GalleryA from "react-photo-gallery"
+// import { images } from "../images/slides"
 // import Phone from "../phone.png"
 // src={require(`../src/images/covers/${this.state.details.cover}.jpg`)}
 const photos = [
@@ -24,7 +25,7 @@ const photos = [
 ]
 const photosA = [
   {
-    photo: "../src/slide1.jpg",
+    photo: "../slide1.jpg",
     caption: "8 bed dormitory",
     // thumbnail: "https://source.unsplash.com/aZjw7xI3QAA/100x67",
   },

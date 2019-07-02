@@ -28,7 +28,7 @@ const IndexPage = () => {
         <div className={layoutStyle.book}>
           <p>BOOK WITH VIBER or WHATSAPP</p>
           <p>+389 70 620 320</p>
-          <p>EASY, FAST &amp; ALWAYS THE BEST PRICE</p>
+          <p>EASY, FAST &amp; -10% DISCOUNT</p>
         </div>
       </div>
       <p className={layoutStyle.accom}>
