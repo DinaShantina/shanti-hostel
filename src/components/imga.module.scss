@@ -1,0 +1,51 @@
+@import "variable.scss";
+.image {
+  border: 1px solid rgb(165, 163, 163);
+  -webkit-box-shadow: 5px 10px 12px 2px rgba(0, 0, 0, 0.29);
+  -moz-box-shadow: 5px 10px 12px 2px rgba(0, 0, 0, 0.29);
+  box-shadow: 5px 10px 12px 2px rgba(0, 0, 0, 0.29);
+  width: 90%;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  img {
+    width: 100%;
+    margin: 0;
+  }
+  p {
+    margin-bottom: 0;
+    padding: 0 0.5rem;
+    text-align: center;
+  }
+  p:nth-child(3) {
+    color: red;
+  }
+}
+.header {
+  text-align: center;
+  color: $violate;
+  margin-top: 1rem;
+}
+
+.fleX {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// ALLIMAGES
+
+.allimages {
+  width: 25%;
+  margin: 0.25rem;
+  img {
+    width: 100%;
+  }
+}
+.flexA {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}

@@ -9,9 +9,18 @@
 [type="date"]::-webkit-calendar-picker-indicator {
   opacity: 0;
 }
-// select#room option[value="10"] {
-//   background: url("../images/slides/slide1.jpg") 97% 50% no-repeat;
-// }
+.pics {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  img {
+    width: 100%;
+    transition: opacity 0.5s ease 0s;
+  }
+}
+.fleX {
+  display: flex;
+}
 .booking-form {
   background-color: #582c83;
   color: white;

@@ -2,10 +2,8 @@ import React from "react"
 import Layout from "../components/layout"
 import Head from "../components/head"
 import bookingStyle from "./booking.module.scss"
-import First from "../images/slides/slide1.jpg"
-// import Second from "../images/slides/slide2.jpg"
-// import Third from "../images/slides/slide3.jpg"
-// import Fourth from "../images/slides/slide4.jpg"
+import PhotosDetails from "../components/photosdetails"
+// import images from "../images.js"
 
 class Booking extends React.Component {
   constructor() {
@@ -18,6 +16,7 @@ class Booking extends React.Component {
       from: "",
       to: "",
       total: "",
+      // displayImg:""
     }
   }
 
@@ -40,9 +39,9 @@ class Booking extends React.Component {
           let date2 = new Date(this.state.from).getTime()
           let date = date1 - date2
           let finalDate = Math.round(date / oneDay)
-
           this.setState({
             total: this.state.room * this.state.persons * finalDate + `€`,
+            // displayImg: images.find(img=>{img.id === mapImg[e.target.value]})// find src
           })
         }
       }
@@ -74,6 +73,9 @@ class Booking extends React.Component {
     return (
       <Layout>
         <Head title="Booking" />
+        <div className={bookingStyle.fleX}>
+          <PhotosDetails />
+        </div>
         <div className={bookingStyle.flexForm}>
           <form
             className={bookingStyle.bookingForm}
@@ -106,7 +108,7 @@ class Booking extends React.Component {
               />
             </div>
             <hr />
-            <img
+            {/* <img
               src={First}
               alt="8bed dorm"
               style={{
@@ -115,7 +117,7 @@ class Booking extends React.Component {
                 border: "1px solid white",
                 display: "none",
               }}
-            />
+            /> */}
             <div>
               How many people? <br />
               <select

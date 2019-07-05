@@ -25,6 +25,11 @@ const SideDrawer = props => {
           </Link>
         </li>
         <li>
+          <Link className="nav-item" to="/gallery">
+            Gallery &nbsp;
+          </Link>
+        </li>
+        <li>
           <Link className="nav-item" to="/blog">
             Blog &nbsp;
           </Link>
