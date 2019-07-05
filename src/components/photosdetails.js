@@ -18,7 +18,6 @@ const PhotosDetails = () => {
               price={el.price}
               id={el.id}
               alt={el.title}
-              onClick={this.props.onClick}
             />
           )
         })}
