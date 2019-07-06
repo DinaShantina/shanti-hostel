@@ -12,6 +12,7 @@ const GalleryA = () => {
         images={IMAGES}
         enableLightbox={true}
         showLightboxThumbnails={true}
+        margin={2}
         // maxRows={3}
         backdropClosesModal
         // currentImage={3}
