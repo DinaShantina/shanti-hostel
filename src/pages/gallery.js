@@ -3,21 +3,24 @@ import Layout from "../components/layout"
 import Head from "../components/head"
 import Gallery from "react-grid-gallery"
 import IMAGES from "../components/allimg"
+import galleryStyle from "../components/imga.module.scss"
 
 const GalleryA = () => {
   return (
     <Layout>
       <Head title="Gallery" />
-      <Gallery
-        images={IMAGES}
-        enableLightbox={true}
-        showLightboxThumbnails={true}
-        margin={2}
-        // maxRows={3}
-        backdropClosesModal
-        // currentImage={3}
-        // isOpen={ true}
-      />
+      <div className={galleryStyle.gallery}>
+        <Gallery
+          images={IMAGES}
+          enableLightbox={true}
+          showLightboxThumbnails={true}
+          margin={2}
+          // maxRows={3}
+          backdropClosesModal
+          // currentImage={3}
+          // isOpen={ true}
+        />
+      </div>
     </Layout>
   )
 }

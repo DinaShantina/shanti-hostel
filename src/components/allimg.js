@@ -187,7 +187,7 @@ const IMAGES = [
     src: "./images/allimg/25.jpg",
     thumbnail: "./images/allimg/25.jpg",
     caption: "Shanti Shared Bathroom",
-    thumbnailWidth: 290,
+    thumbnailWidth: 280,
     thumbnailHeight: 174,
   },
 
@@ -195,14 +195,14 @@ const IMAGES = [
     src: "./images/allimg/26.jpg",
     thumbnail: "./images/allimg/26.jpg",
     caption: "Shanti Shared Bathroom",
-    thumbnailWidth: 290,
+    thumbnailWidth: 280,
     thumbnailHeight: 174,
   },
   {
     src: "./images/allimg/27.jpg",
     thumbnail: "./images/allimg/27.jpg",
     caption: "Shanti Hostel",
-    thumbnailWidth: 290,
+    thumbnailWidth: 280,
     thumbnailHeight: 174,
   },
 ]
