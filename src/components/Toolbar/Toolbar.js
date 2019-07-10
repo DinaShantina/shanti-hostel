@@ -39,7 +39,7 @@ const Toolbar = props => {
               <Link
                 className={toolbarStyle.navItem}
                 activeClassName={toolbarStyle.activeNavItem}
-                to="/about"
+                to="/about/"
               >
                 About &nbsp;
               </Link>
@@ -48,7 +48,7 @@ const Toolbar = props => {
               <Link
                 className={toolbarStyle.navItem}
                 activeClassName={toolbarStyle.activeNavItem}
-                to="/booking"
+                to="/booking/"
               >
                 BOOKING &nbsp;
               </Link>
@@ -57,7 +57,7 @@ const Toolbar = props => {
               <Link
                 className={toolbarStyle.navItem}
                 activeClassName={toolbarStyle.activeNavItem}
-                to="/gallery"
+                to="/gallery/"
               >
                 Gallery &nbsp;
               </Link>

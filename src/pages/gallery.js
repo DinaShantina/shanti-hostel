@@ -6,20 +6,23 @@ import IMAGES from "../components/allimg"
 import galleryStyle from "../components/imga.module.scss"
 
 const GalleryA = () => {
+  const images = IMAGES
   return (
     <Layout>
       <Head title="Gallery" />
       <div className={galleryStyle.gallery}>
-        <Gallery
-          images={IMAGES}
-          enableLightbox={true}
-          showLightboxThumbnails={true}
-          margin={2}
-          // maxRows={3}
-          backdropClosesModal
-          // currentImage={3}
-          // isOpen={ true}
-        />
+        {images.length && (
+          <Gallery
+            images={images}
+            enableLightbox={true}
+            showLightboxThumbnails={true}
+            margin={2}
+            // maxRows={3}
+            backdropClosesModal
+            // currentImage={3}
+            // isOpen={ true}
+          />
+        )}
       </div>
     </Layout>
   )
