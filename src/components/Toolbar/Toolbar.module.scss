@@ -7,13 +7,8 @@
   background-color: $violate;
   .icons {
     height: 100%;
-    // position: absolute;
-    // top: 0;
-    // left: 0;
     box-sizing: border-box;
     display: flex;
-    // flex-direction: column;
-
     a {
       color: white;
       margin: 0 0 0 0.4rem;
@@ -37,9 +32,9 @@
 .toolItems {
   button {
     white-space: nowrap;
-    color: #f9dd00;
+    color: $yellow;
     background-color: transparent;
-    border: 1.8px solid #f9dd00;
+    border: 1.8px solid $yellow;
     border-radius: 10px;
     cursor: pointer;
   }
@@ -78,10 +73,10 @@
   margin-left: 1rem;
 }
 .nav-item:hover {
-  color: #f9dd00;
+  color: $yellow;
 }
 .active-nav-item {
-  color: #f9dd00;
+  color: $yellow;
 }
 .space {
   flex-grow: 1;
@@ -112,7 +107,6 @@ ul li {
 @media (max-width: 375px) {
   .toolLogo {
     margin-left: 0;
-    // margin-right: 3rem;
   }
 }
 @media (max-width: 340px) {

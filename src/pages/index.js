@@ -6,38 +6,71 @@ import Slideshow from "../components/slideshow"
 import layoutStyle from "./contact.module.scss"
 import Logo from "../logo.jpg"
 import { FaViber, FaWhatsapp } from "react-icons/fa"
-import { ImageBackground } from "gatsby"
+class IndexPage extends React.Component {
+  constructor() {
+    super()
+    this.state = {
+      intervalId: 0,
+    }
+  }
+  scrollStep() {
+    if (window.pageYOffset === 0) {
+      clearInterval(this.state.intervalId)
+    }
+    window.scroll(0, window.pageYOffset - this.props.scrollStepInPx)
+  }
 
-const IndexPage = () => {
-  return (
-    <Layout>
-      <Head title="Home" />
-
-      <div className={layoutStyle.logo}>
-        <img src={Logo} alt="logo" />
-      </div>
-      <Slideshow className={layoutStyle.padx} />
-      <div className={layoutStyle.whats}>
-        <div className={layoutStyle.icon}>
-          <a href="viber://contact?number=%2B38970620320">
-            <FaViber className={layoutStyle.viber} />
-          </a>
-          <a href="https://api.whatsapp.com/send?phone=38970620320">
-            <FaWhatsapp className={layoutStyle.viber} />
-          </a>
+  scrollToTop() {
+    let intervalId = setInterval(
+      this.scrollStep.bind(this),
+      this.props.delayInMs
+    )
+    this.setState({ intervalId: intervalId })
+  }
+  render() {
+    return (
+      <Layout>
+        <Head title="Home" />
+        <div className={layoutStyle.logo}>
+          <img src={Logo} alt="logo" />
         </div>
-        <div className={layoutStyle.book}>
-          <p>BOOK WITH VIBER or WHATSAPP</p>
-          <p>+389 70 620 320</p>
-          <p>EASY, FAST &amp; -10% DISCOUNT</p>
+        <Slideshow className={layoutStyle.padx} />
+        <div className={layoutStyle.whats}>
+          <div className={layoutStyle.icon}>
+            <a href="viber://contact?number=%2B38970620320">
+              <FaViber className={layoutStyle.viber} />
+            </a>
+            <a href="https://api.whatsapp.com/send?phone=38970620320">
+              <FaWhatsapp className={layoutStyle.viber} />
+            </a>
+          </div>
+          <div className={layoutStyle.book}>
+            <p>BOOK WITH VIBER or WHATSAPP</p>
+            <p>+389 70 620 320</p>
+            <p>EASY, FAST &amp; -10% DISCOUNT</p>
+          </div>
         </div>
-      </div>
-      <div className={layoutStyle.bgCollage}></div>
-      <p className={layoutStyle.accom}>
-        Do you need accommodation? <Link to="/contact">Contact us</Link>
-      </p>
-    </Layout>
-  )
+        <div className={layoutStyle.bgCollage}></div>
+        <div className={layoutStyle.accom}>
+          <p>
+            Do you need accommodation?
+            <Link to="/contact" className={layoutStyle.linkClick}>
+              CONTACT US
+            </Link>
+          </p>
+          <div className={layoutStyle.logoA}>
+            <img
+              onClick={() => {
+                this.scrollToTop()
+              }}
+              src={Logo}
+              alt="logo"
+            />
+          </div>
+        </div>
+      </Layout>
+    )
+  }
 }
 
 export default IndexPage
