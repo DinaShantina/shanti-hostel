@@ -1,17 +1,15 @@
 import React from "react"
-import Layout from "../components/layout"
-import Head from "../components/head"
+import Layout from "../layout"
+import Head from "../head"
 import bookingStyle from "./booking.module.scss"
-import PhotosDetails from "../components/photosdetails"
-import { Link } from "gatsby"
-// import UserForm from "../components/Form/Userform"
+import PhotosDetails from "../photosdetails"
+import UserForm from "./Userform"
 // import images from "../images.js"
 
 class Booking extends React.Component {
   constructor() {
     super()
     this.state = {
-      step: 1,
       name: "",
       email: "",
       persons: 0,
@@ -19,11 +17,13 @@ class Booking extends React.Component {
       from: "",
       to: "",
       total: "",
+      // displayImg:""
     }
   }
 
   change = e => {
     e.persist()
+
     this.setState(
       {
         [e.target.name]: e.target.value,
@@ -49,10 +49,36 @@ class Booking extends React.Component {
     )
   }
 
+  onSubmit = e => {
+    e.preventDefault()
+    if (
+      this.state.name !== "" &&
+      this.state.email !== "" &&
+      this.state.persons !== "" &&
+      this.state.room !== "" &&
+      this.state.from !== "" &&
+      this.state.to !== ""
+    ) {
+      this.setState({
+        name: "",
+        email: "",
+        persons: "",
+        room: "",
+        from: "",
+        to: "",
+        total: "",
+      })
+    }
+  }
+  continue = e => {
+    e.preventDefault()
+    this.props.nextStep()
+  }
   render() {
     return (
       <Layout>
         <Head title="Booking" />
+        <UserForm />
         <div className={bookingStyle.fleX}>
           <PhotosDetails />
         </div>
@@ -172,9 +198,15 @@ class Booking extends React.Component {
             <p className={bookingStyle.total}>{this.state.total} </p>
             <hr />
             <div>
-              <Link to="/success">
-                <button type="submit">Send</button>
-              </Link>
+              <button
+                onClick={e => {
+                  this.onSubmit(e)
+                  this.continue(e)
+                }}
+                type="submit"
+              >
+                Send
+              </button>
             </div>
           </form>
         </div>

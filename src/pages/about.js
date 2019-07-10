@@ -9,7 +9,6 @@ const AboutPage = () => {
   return (
     <Layout>
       <Head title="About" />
-
       <div className={blogStyles.hoscar}>
         <img src={Hoscar} className={blogStyles.hoscar} />
       </div>

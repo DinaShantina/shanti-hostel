@@ -16,7 +16,7 @@
 
     a {
       color: white;
-      margin: 0 0.4rem;
+      margin: 0 0 0 0.4rem;
       font-size: 1.3rem;
     }
   }
@@ -107,5 +107,30 @@ ul li {
   }
   .toologonav {
     margin-left: 0;
+  }
+}
+@media (max-width: 375px) {
+  .toolLogo {
+    margin-left: 0;
+    // margin-right: 3rem;
+  }
+}
+@media (max-width: 340px) {
+  .toolbar {
+    .icons {
+      a {
+        margin: 1rem 0.4rem;
+      }
+      a:nth-child(0) {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}
+@media (max-width: 320px) {
+  .toolItems {
+    ul {
+      display: none;
+    }
   }
 }

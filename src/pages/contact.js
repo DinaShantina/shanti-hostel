@@ -26,16 +26,11 @@ const ContactPage = () => {
             &nbsp;+389 2 60 90 807
           </p>
           <p>
-            <a>
-              <FaSearchLocation />
-            </a>
+            <FaSearchLocation />
             &nbsp;str.Rade Jovcevski Korcagin 11
           </p>
-
           <p>
-            <a>
-              <FaLocationArrow />
-            </a>
+            <FaLocationArrow />
             &nbsp;Skopje - Macedonia
           </p>
         </div>

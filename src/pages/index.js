@@ -6,6 +6,7 @@ import Slideshow from "../components/slideshow"
 import layoutStyle from "./contact.module.scss"
 import Logo from "../logo.jpg"
 import { FaViber, FaWhatsapp } from "react-icons/fa"
+import { ImageBackground } from "gatsby"
 
 const IndexPage = () => {
   return (
@@ -13,7 +14,7 @@ const IndexPage = () => {
       <Head title="Home" />
 
       <div className={layoutStyle.logo}>
-        <img src={Logo} />
+        <img src={Logo} alt="logo" />
       </div>
       <Slideshow className={layoutStyle.padx} />
       <div className={layoutStyle.whats}>
@@ -31,6 +32,7 @@ const IndexPage = () => {
           <p>EASY, FAST &amp; -10% DISCOUNT</p>
         </div>
       </div>
+      <div className={layoutStyle.bgCollage}></div>
       <p className={layoutStyle.accom}>
         Do you need accommodation? <Link to="/contact">Contact us</Link>
       </p>
