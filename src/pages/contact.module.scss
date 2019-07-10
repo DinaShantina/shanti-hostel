@@ -1,7 +1,7 @@
 @import "../components/variable.scss";
 .bgCollage {
   background-image: url("../images/gallery.jpg");
-  background-size: 900px 380px;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
@@ -149,15 +149,57 @@
     width: 315px;
   }
 }
-@media (min-width: 426px) {
+// @media (min-width: 426px) {
+//   .whats {
+//     .book p:nth-child(1) {
+//       font-size: 1.2rem;
+//     }
+//     .icon a {
+//       font-size: 2rem;
+//     }
+//   }
+// }
+@media (max-width: 426px) {
   .whats {
     .book p:nth-child(1) {
-      font-size: 1.5rem;
+      font-size: 1rem;
     }
     .icon a {
-      font-size: 4rem;
+      font-size: 2rem;
+    }
+  }
+  .book {
+    p {
+      font-size: 2rem;
+    }
+  }
+  .bgCollage {
+    background-size: 870px 425px;
+  }
+  .accom {
+    padding: 1rem 3rem;
+    img {
+      width: 80%;
+    }
+  }
+}
+@media (max-width: 376px) {
+  .whats {
+    .book p:nth-child(1) {
+      font-size: 0.8rem;
+    }
+    .book p:nth-child(2) {
+      font-size: 1rem;
+    }
+    .book p:nth-child(3) {
+      font-size: 0.6rem;
     }
   }
 }
 @media (max-width: 321px) {
+  .whats {
+    .book p:nth-child(1) {
+      font-size: 0.4rem;
+    }
+  }
 }
