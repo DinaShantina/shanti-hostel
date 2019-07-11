@@ -1,7 +1,7 @@
 const IMAGES = [
   {
     src: "https://i.imgur.com/hyumLxF.jpg",
-    thumbnail: "./images/allimg/1.jpg",
+    thumbnail: "https://i.imgur.com/hyumLxF.jpg",
     thumbnailWidth: 290,
     thumbnailHeight: 174,
     caption: "Shanti Outside Living Room",
