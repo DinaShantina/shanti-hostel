@@ -102,11 +102,8 @@ ul li {
   }
 }
 @media (max-width: 426px) {
-
-}
-@media (max-width: 375px) {
-  .toolLogo {
-    margin-left: 0;
+  .toggleButton {
+    margin-left: 2rem;
   }
 }
 @media (max-width: 340px) {

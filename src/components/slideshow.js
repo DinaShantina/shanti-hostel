@@ -5,7 +5,6 @@ import img2 from "../images/slides/slide2.jpg"
 import img3 from "../images/slides/slide3.jpg"
 import img4 from "../images/slides/slide4.jpg"
 import slideStyle from "./slideshow.module.scss"
-// import { threadId } from "worker_threads"
 
 const proprietes = {
   duration: 5000,

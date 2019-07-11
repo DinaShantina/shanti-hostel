@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import "./SideDrawer.css"
+import Logo from "../../shantiA.png"
 const SideDrawer = props => {
   let drawerClasses = "side"
   if (props.show) {
@@ -8,24 +9,33 @@ const SideDrawer = props => {
   }
   return (
     <div className={drawerClasses}>
+      {/* <div>
+        <p>X</p>
+      </div> */}
       <ul>
+        <li>
+          <Link to="/">
+            {/* Shanti Hostel */}
+            <img src={Logo} alt="logo" className="logos" />
+          </Link>
+        </li>
         <li>
           <Link className="nav-item" to="/">
             Home
           </Link>
         </li>
         <li>
-          <Link className="nav-item" to="/about">
+          <Link className="nav-item" to="/about/">
             About &nbsp;
           </Link>
         </li>
         <li>
-          <Link className="nav-item" to="/booking">
+          <Link className="nav-item" to="/booking/">
             BOOKING &nbsp;
           </Link>
         </li>
         <li>
-          <Link className="nav-item" to="/gallery">
+          <Link className="nav-item" to="/gallery/">
             Gallery &nbsp;
           </Link>
         </li>

@@ -1,12 +1,13 @@
 @import "../components/variable.scss";
 .bgCollage {
-  background-image: url("../images/gallery.jpg");
-  background-size: cover;
+  background-image: url("../images/gallery1.jpg");
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
   height: 100%;
   width: 100%;
+  margin: 0 auto;
   padding: 10rem;
 }
 .contact {
@@ -64,7 +65,7 @@
   }
 }
 .padx {
-  padding: 1rem;
+  padding: 2rem;
 }
 .icons {
   height: 100%;
@@ -91,7 +92,8 @@
   justify-content: space-between;
   align-items: center;
   padding: 2rem;
-  margin-top: 1rem;
+  margin-top: -3.8rem;
+  border-bottom: 2px solid white;
   .book p:nth-child(1) {
     font-size: 2rem;
     display: flex;

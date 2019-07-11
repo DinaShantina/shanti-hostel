@@ -1,24 +1,23 @@
 import React, { Component } from "react"
 import Layout from "../layout"
 import Head from "../head"
+import bookingStyle from "./booking.module.scss"
+import Logo from "../../shantiA.png"
+import { Link } from "gatsby"
 
-export class Success extends Component {
-  continue = e => {
-    e.preventDefault()
-    // PROCESS FORM //
-    this.props.nextStep()
-  }
-
-  back = e => {
-    e.preventDefault()
-    this.props.prevStep()
-  }
+class Success extends Component {
   render() {
     return (
       <Layout>
         <Head title="Success" />
-        <h1>Thank You For Your Submission</h1>
-        <p>You will get an email with further instructions</p>
+        <div className={bookingStyle.success}>
+          <h1>Thank You For Your Reservation.</h1>
+          <p>You will get an email with further instructions.</p>
+        </div>
+        <Link to="/" className={bookingStyle.toologonav}>
+          {/* Shanti Hostel */}
+          <img src={Logo} alt="logo" />
+        </Link>
       </Layout>
     )
   }

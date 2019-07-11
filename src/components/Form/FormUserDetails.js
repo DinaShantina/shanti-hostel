@@ -3,82 +3,18 @@ import Layout from "../layout"
 import Head from "../head"
 import bookingStyle from "./booking.module.scss"
 import PhotosDetails from "../photosdetails"
-import UserForm from "./Userform"
 // import images from "../images.js"
 
 class Booking extends React.Component {
-  constructor() {
-    super()
-    this.state = {
-      name: "",
-      email: "",
-      persons: 0,
-      room: 0,
-      from: "",
-      to: "",
-      total: "",
-      // displayImg:""
-    }
-  }
-
-  change = e => {
-    e.persist()
-
-    this.setState(
-      {
-        [e.target.name]: e.target.value,
-      },
-      () => {
-        if (
-          this.state.room &&
-          this.state.persons &&
-          this.state.to &&
-          this.state.from
-        ) {
-          let oneDay = 1000 * 60 * 60 * 24
-          let date1 = new Date(this.state.to).getTime()
-          let date2 = new Date(this.state.from).getTime()
-          let date = date1 - date2
-          let finalDate = Math.round(date / oneDay)
-          this.setState({
-            total: this.state.room * this.state.persons * finalDate + `€`,
-            // displayImg: images.find(img=>{img.id === mapImg[e.target.value]})// find src
-          })
-        }
-      }
-    )
-  }
-
-  onSubmit = e => {
-    e.preventDefault()
-    if (
-      this.state.name !== "" &&
-      this.state.email !== "" &&
-      this.state.persons !== "" &&
-      this.state.room !== "" &&
-      this.state.from !== "" &&
-      this.state.to !== ""
-    ) {
-      this.setState({
-        name: "",
-        email: "",
-        persons: "",
-        room: "",
-        from: "",
-        to: "",
-        total: "",
-      })
-    }
-  }
-  continue = e => {
+  saveAndContinue = e => {
     e.preventDefault()
     this.props.nextStep()
   }
   render() {
+    const { values } = this.props
     return (
       <Layout>
         <Head title="Booking" />
-        <UserForm />
         <div className={bookingStyle.fleX}>
           <PhotosDetails />
         </div>
@@ -98,8 +34,9 @@ class Booking extends React.Component {
               <input
                 name="name"
                 placeholder="Your Name"
-                value={this.state.name}
-                onChange={e => this.change(e)}
+                defaultValue={values.name}
+                // value={this.state.name}
+                onChange={e => this.props.handleChange(e)}
               />
             </div>
             <hr />
@@ -107,9 +44,11 @@ class Booking extends React.Component {
               <label>Email:</label>
               <br />
               <input
+                required
                 placeholder="Your Email"
-                value={this.state.email}
-                onChange={e => this.change(e)}
+                // value={this.state.email}
+                defaultValue={values.email}
+                onChange={e => this.props.handleChange(e)}
                 type="email"
                 name="email"
               />
@@ -129,8 +68,9 @@ class Booking extends React.Component {
               How many people? <br />
               <select
                 name="persons"
-                value={this.state.persons}
-                onChange={e => this.change(e)}
+                // value={this.state.persons}
+                defaultValue={values.persons}
+                onChange={e => this.props.handleChange(e)}
               >
                 <option hidden selected>
                   Select N persons
@@ -154,8 +94,9 @@ class Booking extends React.Component {
               <select
                 id="room"
                 name="room"
-                value={this.state.room}
-                onChange={e => this.change(e)}
+                // value={this.state.room}
+                defaultValue={values.room}
+                onChange={e => this.props.handleChange(e)}
               >
                 <option hidden selected>
                   Select type of room
@@ -181,8 +122,9 @@ class Booking extends React.Component {
                 <input
                   type="date"
                   name="from"
-                  value={this.state.from}
-                  onChange={e => this.change(e)}
+                  // value={this.state.from}
+                  defaultValue={values.from}
+                  onChange={e => this.props.handleChange(e)}
                 />
               </label>
               <label className={bookingStyle.field}>
@@ -190,20 +132,18 @@ class Booking extends React.Component {
                 <input
                   type="date"
                   name="to"
-                  value={this.state.to}
-                  onChange={e => this.change(e)}
+                  // value={this.state.to}
+                  defaultValue={values.to}
+                  onChange={e => this.props.handleChange(e)}
                 />
               </label>
             </div>
-            <p className={bookingStyle.total}>{this.state.total} </p>
+            <p className={bookingStyle.total}>{values.total} </p>
             <hr />
             <div>
               <button
-                onClick={e => {
-                  this.onSubmit(e)
-                  this.continue(e)
-                }}
-                type="submit"
+                onClick={this.saveAndContinue}
+                disabled={!this.props.isEnabled}
               >
                 Send
               </button>
