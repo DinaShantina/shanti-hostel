@@ -58,6 +58,17 @@
       // width: 190px;
     }
   }
+  .total {
+    font-size: 2rem;
+    // color: red;
+    text-align: center;
+
+    p {
+      background-color: white;
+      padding: 0.7rem;
+      border: 1px solid grey;
+    }
+  }
   hr {
     background-color: grey;
   }

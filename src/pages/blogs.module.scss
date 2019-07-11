@@ -81,6 +81,19 @@ h1 {
     margin: 0;
   }
 }
+@media (max-width: 426px) {
+  .header {
+    h1:first-child {
+      font-size: 2rem;
+    }
+    h1:nth-child(2) {
+      font-size: 2.7rem;
+    }
+    h1:nth-child(3) {
+      font-size: 2rem;
+    }
+  }
+}
 // .slider {
 //   background-color: #313131;
 //   img {
