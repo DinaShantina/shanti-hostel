@@ -1,6 +1,6 @@
 const IMAGES = [
   {
-    src: "./images/allimg/1.jpg",
+    src: "https://i.imgur.com/hyumLxF.jpg",
     thumbnail: "./images/allimg/1.jpg",
     thumbnailWidth: 290,
     thumbnailHeight: 174,
@@ -208,4 +208,3 @@ const IMAGES = [
 ]
 
 export default IMAGES
-
