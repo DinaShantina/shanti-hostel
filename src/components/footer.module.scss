@@ -1,12 +1,29 @@
+@import "./variable.scss";
 .footer {
   // margin-top: 3rem;
   background-color: #6d7295;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  padding: 0.5rem;
   p {
     font-size: 12px;
     margin: 0;
     padding: 0 8px 0 0;
+  }
+  .icons {
+    height: 100%;
+    box-sizing: border-box;
     display: flex;
-    justify-content: center;
-    color: white;
+    justify-content: space-between;
+    // align-items: center;
+    a {
+      color: white;
+      margin: 0 0.8rem;
+      font-size: 1.5rem;
+    }
+    a:hover {
+      color: $yellow;
+    }
   }
 }

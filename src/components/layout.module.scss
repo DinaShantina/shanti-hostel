@@ -28,6 +28,11 @@ body {
 }
 .all {
   background-color: #d3d3d3;
+  background-image: url("../images/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
   z-index: -1;
 }
 

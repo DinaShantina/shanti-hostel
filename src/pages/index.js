@@ -56,7 +56,7 @@ class IndexPage extends React.Component {
         <div className={layoutStyle.bgCollage}></div>
         <div className={layoutStyle.accom}>
           <p>
-            Do you need accommodation?
+            Do you need accommodation? <br />
             <Link to="/contact" className={layoutStyle.linkClick}>
               CONTACT US
             </Link>

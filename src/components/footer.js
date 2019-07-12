@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
+import { FaFacebook, FaInstagram } from "react-icons/fa"
 
 import footerStyle from "./footer.module.scss"
 
@@ -15,6 +16,14 @@ const Footer = () => {
   `)
   return (
     <footer className={footerStyle.footer}>
+      <div className={footerStyle.icons}>
+        <a href="https://www.facebook.com/shantihostels/" target="__blank">
+          <FaFacebook />
+        </a>
+        <a href="https://www.instagram.com/shantihostel/" target="__blank">
+          <FaInstagram />
+        </a>
+      </div>
       <p>Created by {data.site.siteMetadata.author}, &copy; 2019</p>
     </footer>
   )

@@ -138,7 +138,7 @@ class Booking extends React.Component {
                 />
               </label>
             </div>
-            <p className={bookingStyle.total}>{values.total} </p>
+            <p className={bookingStyle.total}>{values.total}</p>
             <hr />
             <div>
               <button

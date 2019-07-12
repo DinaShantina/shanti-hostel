@@ -4,7 +4,6 @@ import { Link } from "gatsby"
 import DrawerToggleButton from "../SiderDrawer/DrawerToggleButton"
 // import Logo from "../shanti.png"
 import Logo from "../../shantiA.png"
-import { FaFacebook, FaInstagram } from "react-icons/fa"
 
 // import img1 from "../images/slides/slide1.jpg"
 
@@ -61,7 +60,7 @@ const Toolbar = props => {
                 Gallery &nbsp;
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link
                 className={toolbarStyle.navItem}
                 activeClassName={toolbarStyle.activeNavItem}
@@ -69,7 +68,7 @@ const Toolbar = props => {
               >
                 Blog &nbsp;
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link
                 className={toolbarStyle.navItem}
@@ -91,14 +90,6 @@ const Toolbar = props => {
               </Link>
             </li>
           </ul>
-        </div>
-        <div className={toolbarStyle.icons}>
-          <a href="https://www.facebook.com/shantihostels/" target="__blank">
-            <FaFacebook />
-          </a>
-          <a href="https://www.instagram.com/shantihostel/" target="__blank">
-            <FaInstagram />
-          </a>
         </div>
       </nav>
     </div>
