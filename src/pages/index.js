@@ -19,7 +19,7 @@ class IndexPage extends React.Component {
     }
     window.scroll(0, window.pageYOffset - this.props.scrollStepInPx)
   }
-
+  logoA
   scrollToTop() {
     let intervalId = setInterval(
       this.scrollStep.bind(this),
@@ -31,6 +31,7 @@ class IndexPage extends React.Component {
     return (
       <Layout>
         <Head title="Home" />
+
         <div className={layoutStyle.logo}>
           <img src={Logo} alt="logo" />
         </div>

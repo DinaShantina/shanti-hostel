@@ -3,15 +3,17 @@
 .toolbar {
   width: 100%;
   //   position: fixed;
-  //   height: 56px;
+  height: 56px;
   background-color: $violate;
   .icons {
     height: 100%;
     box-sizing: border-box;
     display: flex;
+    justify-content: flex-start;
+    align-items: center;
     a {
       color: white;
-      margin: 0 0 0 0.4rem;
+      // margin: 0 0 0 0.4rem;
       font-size: 1.3rem;
     }
   }
@@ -22,7 +24,7 @@
   //   justify-content: space-around;
   align-items: center;
   height: 100%;
-  padding: 0 0.4rem;
+  // padding: 0 0.4rem;
 }
 
 .nav-item {
@@ -70,7 +72,10 @@
   }
 }
 .toolLogo {
-  margin-left: 1rem;
+  img {
+    margin: 0 1rem;
+  }
+  // margin-left: 1rem;
 }
 .nav-item:hover {
   color: $yellow;
@@ -103,25 +108,23 @@ ul li {
 }
 @media (max-width: 426px) {
   .toggleButton {
-    margin-left: 2rem;
+    // margin-left: 2rem;
   }
 }
 @media (max-width: 340px) {
   .toolbar {
     .icons {
       a {
-        margin: 1rem 0.4rem;
+        // margin: 1rem 0.4rem;
       }
       a:nth-child(0) {
-        margin-right: 0.5rem;
+        // margin-right: 0.5rem;
       }
     }
   }
 }
 @media (max-width: 320px) {
   .toolItems {
-    ul {
-      display: none;
-    }
+    display: none;
   }
 }

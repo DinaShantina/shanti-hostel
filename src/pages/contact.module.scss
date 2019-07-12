@@ -53,8 +53,10 @@
   background-color: white;
   display: flex;
   justify-content: center;
-  width: 50%;
   margin: 0 auto;
+  img {
+    width: 50%;
+  }
 }
 .logoA {
   text-align: center;

@@ -18,7 +18,6 @@ const Toolbar = props => {
         </div>
         <div className={toolbarStyle.toolLogo}>
           <Link to="/" className={toolbarStyle.toologonav}>
-            {/* Shanti Hostel */}
             <img src={Logo} alt="logo" />
           </Link>
         </div>
