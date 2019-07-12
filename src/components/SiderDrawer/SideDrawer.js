@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import "./SideDrawer.css"
 import Logo from "../../shantiA.png"
+
 const SideDrawer = props => {
   let drawerClasses = "side"
   if (props.show) {

@@ -5,7 +5,8 @@
   -moz-box-shadow: 5px 10px 12px 2px rgba(0, 0, 0, 0.29);
   box-shadow: 5px 10px 12px 2px rgba(0, 0, 0, 0.29);
   width: 90%;
-  margin: 1rem;
+  // margin: 1rem;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,6 +34,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  div {
+    margin-top: 1rem;
+  }
 }
 
 // ALLIMAGES
@@ -41,7 +45,17 @@
 
   img {
     margin-left: 0 !important;
-
+  }
+}
+@media (max-width: 426px) {
+  .fleX {
+    flex-wrap: wrap;
+    // flex-direction: column;
+    // width: 50%;
+    div {
+      flex-basis: 50%;
+      justify-content: space-around;
+    }
   }
 }
 @media (max-width: 321px) {

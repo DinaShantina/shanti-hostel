@@ -31,10 +31,12 @@ class IndexPage extends React.Component {
     return (
       <Layout>
         <Head title="Home" />
-
-        <div className={layoutStyle.logo}>
+        <div className={layoutStyle.logoA}>
           <img src={Logo} alt="logo" />
         </div>
+        {/* <div className={layoutStyle.logo}>
+          <img src={Logo} alt="logo" />
+        </div> */}
         <Slideshow className={layoutStyle.padx} />
         <div className={layoutStyle.whats}>
           <div className={layoutStyle.icon}>
