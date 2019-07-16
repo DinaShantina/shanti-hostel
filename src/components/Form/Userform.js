@@ -21,7 +21,7 @@ class UserForm extends React.Component {
     isSubmitted: false,
   };
 
-  nextStep = async () => {
+  nextStep = async e => {
     const { step } = this.state;
 
     await fetch("/", {
