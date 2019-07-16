@@ -1,9 +1,9 @@
-import React from "react"
-import { Link } from "gatsby"
-import Layout from "../components/layout"
-import Head from "../components/head"
-import blogStyles from "./blogs.module.scss"
-import Hoscar from "../HoscarSlide.jpg"
+import React from "react";
+import { Link } from "gatsby";
+import Layout from "../components/layout";
+import Head from "../components/head";
+import blogStyles from "./blogs.module.scss";
+import Hoscar from "../HoscarSlide.jpg";
 
 const AboutPage = () => {
   return (
@@ -14,7 +14,7 @@ const AboutPage = () => {
       </div>
       <div className={blogStyles.aboutStyle}>
         <div className={blogStyles.header}>
-          <h1 className={blogStyles.animac}>Backpacker's</h1>
+          <h1 className={blogStyles.animac}>Friendly</h1>
           <h1>HOSTEL</h1>
           <h1>in Skopje</h1>
         </div>
@@ -42,18 +42,18 @@ const AboutPage = () => {
           <br /> <br /> So we invite you to stay in our little and charming
           hostel and let us make your visit in Skopje unforgettable.
           <br /> <br />
-          <div className={blogStyles.since}>
-            <p>Dina Damjanovikj</p>
-            <p>Petar Shevchenko</p>
-            <p>Marjan Damjanovikj</p>
-          </div>
         </p>
+        <div className={blogStyles.since}>
+          <p>Dina Damjanovikj</p>
+          <p>Petar Shevchenko</p>
+          <p>Marjan Damjanovikj</p>
+        </div>
         <p>
           <Link to="/contact">Contact us</Link>
         </p>
       </div>
     </Layout>
-  )
-}
+  );
+};
 
-export default AboutPage
+export default AboutPage;

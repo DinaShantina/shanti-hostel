@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Libre+Franklin&display=swap");
 .posts {
   list-style-type: none;
   margin: 0;
@@ -37,6 +38,9 @@ h1 {
 }
 .text {
   padding: 0 5rem 0 0;
+  color: #333;
+  font-family: "Literata", serif;
+  font-size: 1.3rem;
 }
 .hoscar {
   width: 100%;
@@ -53,8 +57,9 @@ h1 {
   }
 }
 .header {
+  font-family: "Libre Franklin", sans-serif;
   h1:first-child {
-    font-size: 3rem;
+    font-size: 4.5rem;
     font-weight: 100;
     margin: 0;
     padding: 0;
@@ -65,39 +70,13 @@ h1 {
     margin: 0;
     padding: 0;
     // margin-top: 1rem;
-    -webkit-animation: animac 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-    animation: animac 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   }
-  .animac {
-    font-size: 3rem;
+  h1:nth-child(3) {
+    font-size: 3.5rem;
     color: red;
     font-weight: 100;
     padding: 0 0 1rem 0;
     margin: 0;
-  }
-  @-webkit-keyframes animac {
-    0% {
-      -webkit-transform: scaleX(0);
-      transform: scaleX(0);
-      opacity: 1;
-    }
-    100% {
-      -webkit-transform: scaleX(1);
-      transform: scaleX(1);
-      opacity: 1;
-    }
-  }
-  @keyframes animac {
-    0% {
-      -webkit-transform: scaleX(0);
-      transform: scaleX(0);
-      opacity: 1;
-    }
-    100% {
-      -webkit-transform: scaleX(1);
-      transform: scaleX(1);
-      opacity: 1;
-    }
   }
 }
 .since {
