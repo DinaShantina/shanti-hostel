@@ -20,13 +20,7 @@ class Booking extends React.Component {
         </div>
 
         <div className={bookingStyle.flexForm}>
-          <form
-            className={bookingStyle.bookingForm}
-            name="contact"
-            method="POST"
-            netlify-honeypot="bot-field"
-            data-netlify="true"
-          >
+          <form className={bookingStyle.bookingForm}>
             <h4>YOUR RESERVATION</h4>
             <div className="hidden">
               <label>Name:</label>
