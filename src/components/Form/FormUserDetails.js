@@ -1,17 +1,17 @@
-import React from "react"
-import Layout from "../layout"
-import Head from "../head"
-import bookingStyle from "./booking.module.scss"
-import PhotosDetails from "../photosdetails"
+import React from "react";
+import Layout from "../layout";
+import Head from "../head";
+import bookingStyle from "./booking.module.scss";
+import PhotosDetails from "../photosdetails";
 // import images from "../images.js"
 
 class Booking extends React.Component {
   saveAndContinue = e => {
-    e.preventDefault()
-    this.props.nextStep()
-  }
+    e.preventDefault();
+    this.props.nextStep();
+  };
   render() {
-    const { values } = this.props
+    const { values } = this.props;
     return (
       <Layout>
         <Head title="Booking" />
@@ -145,8 +145,8 @@ class Booking extends React.Component {
           </form>
         </div>
       </Layout>
-    )
+    );
   }
 }
 
-export default Booking
+export default Booking;

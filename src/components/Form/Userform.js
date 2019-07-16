@@ -21,7 +21,9 @@ class UserForm extends React.Component {
     isSubmitted: false,
   };
 
-  nextStep = async e => {
+  async nextStep() {
+    // console.log(e);
+    // e.preventDefault();
     const { step } = this.state;
 
     await fetch("/", {
@@ -31,13 +33,10 @@ class UserForm extends React.Component {
     });
     // .then(() => alert("Success!"))
     // .catch(error => alert(error));
-
-    e.preventDefault();
-
     this.setState({
       step: step + 1,
     });
-  };
+  }
   handleChange = e => {
     // e.persist()
     this.setState(
@@ -75,7 +74,7 @@ class UserForm extends React.Component {
       case 1:
         return (
           <FormUserDetails
-            nextStep={this.nextStep}
+            nextStep={() => this.nextStep()}
             handleChange={this.handleChange}
             values={values}
             isEnabled={isEnabled}
