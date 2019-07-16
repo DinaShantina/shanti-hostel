@@ -139,7 +139,7 @@ class Booking extends React.Component {
                 onClick={this.saveAndContinue}
                 disabled={!this.props.isEnabled}
               >
-                Send
+                SEND
               </button>
             </div>
           </form>

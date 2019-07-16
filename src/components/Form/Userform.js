@@ -2,6 +2,7 @@ import React from "react";
 import FormUserDetails from "./FormUserDetails";
 import Success from "./Success";
 
+
 const encode = data => {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
@@ -88,6 +89,7 @@ class UserForm extends React.Component {
         );
       case 2:
         return <Success />;
+      // return <Success />;
     }
   }
 }
