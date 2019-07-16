@@ -98,13 +98,13 @@ class Booking extends React.Component {
                 <option name="8bed" value="10">
                   8 bed Dorm
                 </option>
-                <option name="4beda" value="12">
+                <option name="4beda" value="11">
                   4 yellow bed Dorm
                 </option>
-                <option name="4bedb" value="11">
+                <option name="4bedb" value="12">
                   4 orange bed Dorm
                 </option>
-                <option name="double" value="25">
+                <option name="double" value="28">
                   Private Double Room
                 </option>
               </select>
