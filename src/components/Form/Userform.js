@@ -18,6 +18,7 @@ class UserForm extends React.Component {
     from: "",
     to: "",
     total: "",
+    roomName: "",
     isSubmitted: false,
   };
 
@@ -38,6 +39,11 @@ class UserForm extends React.Component {
     });
   }
   handleChange = e => {
+    if (e.target.name === "room") {
+      this.setState({
+        roomName: e.target.options[e.target.selectedIndex].text,
+      });
+    }
     // e.persist()
     this.setState(
       {
