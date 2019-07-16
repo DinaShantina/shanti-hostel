@@ -85,7 +85,7 @@ const Toolbar = props => {
                 to="/booking"
               >
                 <button className={toolbarStyle.one}>
-                  <div className={toolbarStyle.insider}>BOOK NOW</div>
+                  <p className={toolbarStyle.insider}>BOOK NOW</p>
                 </button>
               </Link>
             </li>

@@ -14,7 +14,7 @@ const AboutPage = () => {
       </div>
       <div className={blogStyles.aboutStyle}>
         <div className={blogStyles.header}>
-          <h1>Backpacker's</h1>
+          <h1 className={blogStyles.animac}>Backpacker's</h1>
           <h1>HOSTEL</h1>
           <h1>in Skopje</h1>
         </div>

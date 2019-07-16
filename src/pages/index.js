@@ -31,7 +31,7 @@ class IndexPage extends React.Component {
     return (
       <Layout>
         <Head title="Home" />
-        <div className={layoutStyle.logoA}>
+        <div className={layoutStyle.logoFirst}>
           <img src={Logo} alt="logo" />
         </div>
         {/* <div className={layoutStyle.logo}>
@@ -48,9 +48,9 @@ class IndexPage extends React.Component {
             </a>
           </div>
           <div className={layoutStyle.book}>
-            <p>BOOK WITH VIBER or WHATSAPP</p>
+            <p>BOOK WITH VIBER OR WHATSAPP</p>
             <p>+389 70 620 320</p>
-            <p>EASY, FAST &amp; -10% DISCOUNT</p>
+            <p>EASY, FAST &amp; WITH -10% DISCOUNT</p>
           </div>
         </div>
         <div className={layoutStyle.bgCollage}></div>

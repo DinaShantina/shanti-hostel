@@ -45,6 +45,9 @@
     color: $violate;
     transition-duration: 0.5s;
   }
+  button:focus {
+    outline-style: none;
+  }
   ul {
     list-style: none;
     margin: 0 2.5rem;

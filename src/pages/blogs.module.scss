@@ -65,13 +65,39 @@ h1 {
     margin: 0;
     padding: 0;
     // margin-top: 1rem;
+    -webkit-animation: animac 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: animac 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   }
-  h1:nth-child(3) {
+  .animac {
     font-size: 3rem;
     color: red;
     font-weight: 100;
     padding: 0 0 1rem 0;
     margin: 0;
+  }
+  @-webkit-keyframes animac {
+    0% {
+      -webkit-transform: scaleX(0);
+      transform: scaleX(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
+      opacity: 1;
+    }
+  }
+  @keyframes animac {
+    0% {
+      -webkit-transform: scaleX(0);
+      transform: scaleX(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
+      opacity: 1;
+    }
   }
 }
 .since {
