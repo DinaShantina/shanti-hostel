@@ -1,31 +1,32 @@
-import React from "react"
-import { Link } from "gatsby"
-import Layout from "../components/layout"
-import Head from "../components/head"
-import Slideshow from "../components/slideshow"
-import layoutStyle from "./contact.module.scss"
-import Logo from "../logo.jpg"
-import { FaViber, FaWhatsapp } from "react-icons/fa"
+import React from "react";
+import { Link } from "gatsby";
+import Layout from "../components/layout";
+import Head from "../components/head";
+import Slideshow from "../components/slideshow";
+import layoutStyle from "./contact.module.scss";
+import Logo from "../logo.jpg";
+import { FaViber, FaWhatsapp } from "react-icons/fa";
+
 class IndexPage extends React.Component {
   constructor() {
-    super()
+    super();
     this.state = {
       intervalId: 0,
-    }
+    };
   }
   scrollStep() {
     if (window.pageYOffset === 0) {
-      clearInterval(this.state.intervalId)
+      clearInterval(this.state.intervalId);
     }
-    window.scroll(0, window.pageYOffset - this.props.scrollStepInPx)
+    window.scroll(0, window.pageYOffset - this.props.scrollStepInPx);
   }
-  logoA
+  logoA;
   scrollToTop() {
     let intervalId = setInterval(
       this.scrollStep.bind(this),
       this.props.delayInMs
-    )
-    this.setState({ intervalId: intervalId })
+    );
+    this.setState({ intervalId: intervalId });
   }
   render() {
     return (
@@ -64,7 +65,7 @@ class IndexPage extends React.Component {
           <div className={layoutStyle.logoA}>
             <img
               onClick={() => {
-                this.scrollToTop()
+                this.scrollToTop();
               }}
               src={Logo}
               alt="logo"
@@ -72,8 +73,8 @@ class IndexPage extends React.Component {
           </div>
         </div>
       </Layout>
-    )
+    );
   }
 }
 
-export default IndexPage
+export default IndexPage;
