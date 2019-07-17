@@ -1,4 +1,4 @@
-const dotenv = require("dotenv").config()
+const dotenv = require("dotenv").config();
 module.exports = {
   siteMetadata: {
     title: "Shanti-Hostel",
@@ -21,6 +21,16 @@ module.exports = {
         path: `${__dirname}/src/`, // <= error was here
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Shanti Hostel`,
+        short_name: `Shanti`,
+        start_url: `/`,
+        icon: "src/shantiA.png",
+        display: `standalone`,
+      },
+    },
     "gatsby-plugin-sharp",
     {
       resolve: "gatsby-transformer-remark",
@@ -38,4 +48,4 @@ module.exports = {
       },
     },
   ],
-}
+};
