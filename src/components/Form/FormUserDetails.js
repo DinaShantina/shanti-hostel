@@ -12,6 +12,7 @@ class Booking extends React.Component {
   };
   render() {
     const { values } = this.props;
+
     return (
       <Layout>
         <Head title="Booking" />
@@ -133,6 +134,8 @@ class Booking extends React.Component {
               </label>
             </div>
             <p className={bookingStyle.total}>{values.total}</p>
+            {/* <div className={"btn-group pull-right " + (this.props.showBulkActions ? 'show' : 'hidden')}></div> */}
+
             <hr />
             <div>
               <button

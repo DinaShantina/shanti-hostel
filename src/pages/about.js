@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 import Layout from "../components/layout";
 import Head from "../components/head";
 import blogStyles from "./blogs.module.scss";
-import Hoscar from "../HoscarSlide.jpg";
+import Hoscar from "../HoscarSlide2.jpg";
 
 const AboutPage = () => {
   return (

@@ -2,7 +2,6 @@ import React from "react";
 import FormUserDetails from "./FormUserDetails";
 import Success from "./Success";
 
-
 const encode = data => {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
@@ -63,7 +62,8 @@ class UserForm extends React.Component {
           let date = date1 - date2;
           let finalDate = Math.round(date / oneDay);
           this.setState({
-            total: this.state.room * this.state.persons * finalDate + `€`,
+            total:
+              `total ` + this.state.room * this.state.persons * finalDate + `€`,
             // displayImg: images.find(img=>{img.id === mapImg[e.target.value]})// find src
           });
         }
