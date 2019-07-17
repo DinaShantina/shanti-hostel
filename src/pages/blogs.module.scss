@@ -43,7 +43,13 @@ h1 {
   font-size: 1.3rem;
 }
 .hoscar {
+  background-image: url("../HoscarSlide.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center bottom;
   width: 100%;
+  padding: 13.5rem;
   // height: 50vh;
   background-color: #313131;
   border-top: 2px solid white;
