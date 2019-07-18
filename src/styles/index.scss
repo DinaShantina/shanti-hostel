@@ -625,7 +625,8 @@ pre tt:after {
   z-index: 10;
 }
 .each-slide > div > img {
-  height: 33rem;
+  // height: 33rem;
+  padding: 0 2rem;
   width: 100%;
 }
 // .slide-container {

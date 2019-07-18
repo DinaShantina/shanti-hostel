@@ -36,7 +36,7 @@ const ContactPage = () => {
         </div>
         <Iframe
           url="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2965.2592849614466!2d21.442481032641428!3d41.994710654246944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x309377b0c6a08aa7!2z0KjQsNC90YLQuCDQpdC-0YHRgtC10LsgMQ!5e0!3m2!1sen!2smk!4v1562017120321!5m2!1sen!2smk"
-          width="1000px"
+          width="1200px"
           height="450"
           id="myId"
           className="myClassname"

@@ -1,12 +1,12 @@
-import React from "react"
-import { Link } from "gatsby"
-import "./SideDrawer.css"
-import Logo from "../../shantiA.png"
+import React from "react";
+import { Link } from "gatsby";
+import "./SideDrawer.css";
+import Logo from "../../shantiA.png";
 
 const SideDrawer = props => {
-  let drawerClasses = "side"
+  let drawerClasses = "side";
   if (props.show) {
-    drawerClasses = "side open"
+    drawerClasses = "side open";
   }
   return (
     <div className={drawerClasses}>
@@ -16,7 +16,6 @@ const SideDrawer = props => {
       <ul>
         <li>
           <Link to="/">
-            {/* Shanti Hostel */}
             <img src={Logo} alt="logo" className="logos" />
           </Link>
         </li>
@@ -40,11 +39,11 @@ const SideDrawer = props => {
             Gallery &nbsp;
           </Link>
         </li>
-        <li>
+        {/* <li>
           <Link className="nav-item" to="/blog">
             Blog &nbsp;
           </Link>
-        </li>
+        </li> */}
         <li>
           <Link className="nav-item" to="/contact">
             Contact &nbsp;
@@ -61,7 +60,7 @@ const SideDrawer = props => {
             </li> */}
       </ul>
     </div>
-  )
-}
+  );
+};
 
-export default SideDrawer
+export default SideDrawer;

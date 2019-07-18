@@ -134,6 +134,21 @@ ul li {
     }
   }
 }
+@media (max-width: 953px) {
+  .nav-item {
+    font-size: 0.9rem;
+  }
+  .toolItems {
+    ul li {
+      margin: 0;
+    }
+  }
+}
+@media (max-width: 777px) {
+  .nav-item {
+    font-size: 0.8rem;
+  }
+}
 @media (max-width: 320px) {
   .toolItems {
     display: none;

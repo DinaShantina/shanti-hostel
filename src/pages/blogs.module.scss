@@ -41,6 +41,8 @@ h1 {
   color: #333;
   font-family: "Literata", serif;
   font-size: 1.3rem;
+  text-align: justify;
+  margin-top: 1rem;
 }
 .hoscar {
   // background-image: url("../HoscarSlide.jpg");
@@ -86,6 +88,7 @@ h1 {
   }
 }
 .since {
+  margin-bottom: 1rem;
   p {
     font-style: italic;
     color: grey;
