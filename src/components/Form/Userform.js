@@ -51,6 +51,8 @@ class UserForm extends React.Component {
       },
       () => {
         if (
+          this.state.name &&
+          this.state.email &&
           this.state.room &&
           this.state.persons &&
           this.state.to &&
@@ -89,6 +91,7 @@ class UserForm extends React.Component {
         );
       case 2:
         return <Success />;
+
       // return <Success />;
     }
   }

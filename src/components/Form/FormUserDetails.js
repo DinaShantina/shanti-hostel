@@ -27,6 +27,7 @@ class Booking extends React.Component {
               <label>Name:</label>
               <br />
               <input
+                required
                 name="name"
                 placeholder="Your Name"
                 defaultValue={values.name}
@@ -125,6 +126,7 @@ class Booking extends React.Component {
               <label className={bookingStyle.field}>
                 Check out: <br />
                 <input
+                  required
                   type="date"
                   name="to"
                   // value={this.state.to}
@@ -133,7 +135,9 @@ class Booking extends React.Component {
                 />
               </label>
             </div>
-            <p className={bookingStyle.total}>{values.total}</p>
+            {values.total !== "" ? (
+              <p className={bookingStyle.total}>{values.total}</p>
+            ) : null}
             {/* <div className={"btn-group pull-right " + (this.props.showBulkActions ? 'show' : 'hidden')}></div> */}
 
             <hr />
