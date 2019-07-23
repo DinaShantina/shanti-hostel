@@ -7,7 +7,7 @@ import { Link } from "gatsby";
 
 class Success extends Component {
   componentDidMount() {
-    window.location.pathname = "/Success/";
+    window.location.pathname = "/success/";
   }
   render() {
     return (

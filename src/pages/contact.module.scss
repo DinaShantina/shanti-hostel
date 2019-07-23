@@ -187,7 +187,7 @@
   }
   .whats {
     .book p:nth-child(1) {
-      font-size: 1rem;
+      font-size: 1.2rem;
     }
     .icon a {
       font-size: 2rem;
@@ -199,7 +199,7 @@
     }
   }
   .bgCollage {
-    background-size: 870px 425px;
+    background-size: cover;
   }
   .accom {
     padding: 1rem 3rem;
@@ -208,19 +208,32 @@
     }
   }
 }
+@media (max-width: 426px) {
+  .logoFirst {
+    width: 80%;
+  }
+}
 @media (max-width: 376px) {
   .whats {
+    padding: 1rem 0.7rem;
     .book p:nth-child(1) {
-      font-size: 0.8rem;
-    }
-    .book p:nth-child(2) {
       font-size: 1rem;
     }
+    .book p:nth-child(2) {
+      font-size: 1.8rem;
+    }
     .book p:nth-child(3) {
-      font-size: 0.6rem;
+      font-size: 0.8rem;
+    }
+  }
+  .accom {
+    a {
+      font-size: 1.6rem;
+      padding: 2rem;
     }
   }
 }
+
 @media (max-width: 321px) {
   .whats {
     padding: 0.5rem;

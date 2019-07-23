@@ -51,6 +51,12 @@
     border-radius: 5px;
     padding: 0.4rem 0;
   }
+  button:disabled,
+  button[disabled] {
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
+  }
   .field input {
     width: 90%;
   }
@@ -114,6 +120,11 @@
   }
 }
 @media (max-width: 426px) {
+  .booking-form {
+    h4 {
+      width: 70%;
+    }
+  }
   select {
     width: 100%;
   }
@@ -124,10 +135,18 @@
     flex-direction: column;
   }
 }
+@media (max-width: 376px) {
+  .booking-form {
+    h4 {
+      width: 87%;
+    }
+  }
+}
 @media (max-width: 321px) {
   .booking-form {
     h4 {
       font-size: 1.1rem;
+      width: 70%;
     }
   }
 }

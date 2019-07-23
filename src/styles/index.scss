@@ -639,6 +639,9 @@ pre tt:after {
   }
 }
 @media only screen and (max-width: 426px) {
+  .each-slide > div > img {
+    padding: 0;
+  }
   .ReactGridGallery {
     display: flex;
     // flex-direction: column;
