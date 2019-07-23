@@ -23,7 +23,6 @@ class UserForm extends React.Component {
   };
 
   async nextStep() {
-    // console.log(e);
     // e.preventDefault();
     const { step } = this.state;
 
@@ -32,8 +31,6 @@ class UserForm extends React.Component {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...this.state }),
     });
-    // .then(() => alert("Success!"))
-    // .catch(error => alert(error));
     this.setState({
       step: step + 1,
     });
@@ -91,8 +88,6 @@ class UserForm extends React.Component {
         );
       case 2:
         return <Success />;
-
-      // return <Success />;
     }
   }
 }

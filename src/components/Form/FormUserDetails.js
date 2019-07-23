@@ -98,13 +98,13 @@ class Booking extends React.Component {
                   Select type of room
                 </option>
                 <option name="8bed" value="10">
-                  8 bed Dorm
+                  8 Bed Dorm
                 </option>
                 <option name="4beda" value="11">
-                  4 yellow bed Dorm
+                  4 Bed Yellow Dorm
                 </option>
                 <option name="4bedb" value="12">
-                  4 orange bed Dorm
+                  4 Bed Orange Dorm
                 </option>
                 <option name="double" value="28">
                   Private Double Room
@@ -118,7 +118,6 @@ class Booking extends React.Component {
                 <input
                   type="date"
                   name="from"
-                  // value={this.state.from}
                   defaultValue={values.from}
                   onChange={e => this.props.handleChange(e)}
                 />
@@ -126,10 +125,8 @@ class Booking extends React.Component {
               <label className={bookingStyle.field}>
                 Check out: <br />
                 <input
-                  required
                   type="date"
                   name="to"
-                  // value={this.state.to}
                   defaultValue={values.to}
                   onChange={e => this.props.handleChange(e)}
                 />
@@ -138,8 +135,6 @@ class Booking extends React.Component {
             {values.total !== "" ? (
               <p className={bookingStyle.total}>{values.total}</p>
             ) : null}
-            {/* <div className={"btn-group pull-right " + (this.props.showBulkActions ? 'show' : 'hidden')}></div> */}
-
             <hr />
             <div>
               <button

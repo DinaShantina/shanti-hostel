@@ -6,12 +6,12 @@ let images = [
   },
   {
     id: 2,
-    title: "4 Bed Dormitory",
+    title: "4 Bed Yellow",
     price: "€11",
   },
   {
     id: 3,
-    title: "4 Bed Dormitory s",
+    title: "4 Bed Orange",
     price: "€12",
   },
   {
@@ -19,9 +19,9 @@ let images = [
     title: "Private Double Room",
     price: "€28",
   },
-]
+];
 // images od 10
 // mapImg={"4":"1",}
 // i vo state ke bide imgId
 // if ()
-export default images
+export default images;
