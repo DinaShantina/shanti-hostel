@@ -3,8 +3,22 @@ import Layout from "../layout";
 import Head from "../head";
 import bookingStyle from "./booking.module.scss";
 import PhotosDetails from "../photosdetails";
+// import { redirectTo } from "@reach/router";
 // import images from "../images.js"
-
+// const initialState = {
+//   name: "",
+//   email: "",
+//   persons: "",
+//   room: "",
+//   from: "",
+//   to: "",
+//   nameError: "",
+//   emailError: "",
+//   personsError: "",
+//   roomError: "",
+//   fromError: "",
+//   toError: "",
+// };
 class Booking extends React.Component {
   saveAndContinue = e => {
     e.preventDefault();
@@ -12,7 +26,6 @@ class Booking extends React.Component {
   };
   render() {
     const { values } = this.props;
-
     return (
       <Layout>
         <Head title="Booking" />
@@ -23,6 +36,7 @@ class Booking extends React.Component {
         <div className={bookingStyle.flexForm}>
           <form className={bookingStyle.bookingForm}>
             <h4>YOUR RESERVATION</h4>
+            <p className={bookingStyle.error}>{values.totalError}</p>
             <div className="hidden">
               <label>Name:</label>
               <br />
@@ -68,9 +82,7 @@ class Booking extends React.Component {
                 defaultValue={values.persons}
                 onChange={e => this.props.handleChange(e)}
               >
-                <option hidden selected>
-                  Select N persons
-                </option>
+                <option hidden>Select N persons</option>
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
@@ -94,9 +106,7 @@ class Booking extends React.Component {
                 defaultValue={values.room}
                 onChange={e => this.props.handleChange(e)}
               >
-                <option hidden selected>
-                  Select type of room
-                </option>
+                <option hidden>Select type of room</option>
                 <option name="8bed" value="10">
                   8 Bed Dorm
                 </option>
@@ -110,6 +120,9 @@ class Booking extends React.Component {
                   Private Double Room
                 </option>
               </select>
+              <div style={{ fontSize: 12, color: "red" }}>
+                {values.roomError}
+              </div>
             </div>
             <hr />
             <div className={bookingStyle.date}>
@@ -122,6 +135,7 @@ class Booking extends React.Component {
                   onChange={e => this.props.handleChange(e)}
                 />
               </label>
+
               <label className={bookingStyle.field}>
                 Check out: <br />
                 <input

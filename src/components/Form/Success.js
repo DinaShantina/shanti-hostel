@@ -19,7 +19,6 @@ class Success extends Component {
           <Link to="/">Home</Link>
         </div>
         <Link to="/" className={bookingStyle.toologonav}>
-          {/* Shanti Hostel */}
           <img src={Logo} alt="logo" />
         </Link>
       </Layout>

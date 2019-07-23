@@ -10,7 +10,7 @@ const AboutPage = () => {
     <Layout>
       <Head title="About" />
       <div className={blogStyles.hoscar}>
-        <img src={Hoscar} className={blogStyles.hoscar} />
+        <img src={Hoscar} className={blogStyles.hoscar} alt="awards" />
       </div>
       <div className={blogStyles.aboutStyle}>
         <div className={blogStyles.header}>

@@ -1,15 +1,15 @@
-import React from "react"
-import Layout from "../components/layout"
-import Head from "../components/head"
-import bookingStyle from "./booking.module.scss"
-import PhotosDetails from "../components/photosdetails"
-import Success from "../components/Form/Success"
+import React from "react";
+import Layout from "../components/layout";
+import Head from "../components/head";
+import bookingStyle from "./booking.module.scss";
+import PhotosDetails from "../components/photosdetails";
+import Success from "../components/Form/Success";
 // import UserForm from "../components/Form/Userform"
 // import images from "../images.js"
 
 class Booking extends React.Component {
   constructor() {
-    super()
+    super();
     this.state = {
       step: 1,
       name: "",
@@ -21,11 +21,11 @@ class Booking extends React.Component {
       total: "",
       errors: [],
       isSubmitted: false,
-    }
+    };
   }
 
   change = e => {
-    e.persist()
+    e.persist();
     this.setState(
       {
         [e.target.name]: e.target.value,
@@ -37,35 +37,35 @@ class Booking extends React.Component {
           this.state.to &&
           this.state.from
         ) {
-          let oneDay = 1000 * 60 * 60 * 24
-          let date1 = new Date(this.state.to).getTime()
-          let date2 = new Date(this.state.from).getTime()
-          let date = date1 - date2
-          let finalDate = Math.round(date / oneDay)
+          let oneDay = 1000 * 60 * 60 * 24;
+          let date1 = new Date(this.state.to).getTime();
+          let date2 = new Date(this.state.from).getTime();
+          let date = date1 - date2;
+          let finalDate = Math.round(date / oneDay);
           this.setState({
             total: this.state.room * this.state.persons * finalDate + `€`,
             // displayImg: images.find(img=>{img.id === mapImg[e.target.value]})// find src
-          })
+          });
         }
       }
-    )
-  }
+    );
+  };
   onSubmit = e => {
-    e.preventDeafult()
-    this.setState({ isSubmitted: true })
-  }
+    e.preventDeafult();
+    this.setState({ isSubmitted: true });
+  };
   nextStep = () => {
-    const { step } = this.state
+    const { step } = this.state;
     this.setState({
       step: step + 1,
-    })
-  }
+    });
+  };
 
   render() {
-    const { total } = this.state
-    const isEnabled = total.length > 0
-    const { step } = this.state
-    console.log(isEnabled)
+    const { total } = this.state;
+    const isEnabled = total.length > 0;
+    const { step } = this.state;
+    console.log(isEnabled);
     switch (step) {
       case 1:
         return (
@@ -210,7 +210,7 @@ class Booking extends React.Component {
               {this.state.isSubmitted && <Success />}
             </div>
           </Layout>
-        )
+        );
       case 2:
         return (
           <Layout>
@@ -218,8 +218,9 @@ class Booking extends React.Component {
             <h1>Thank You For Your Submission</h1>
             <p>You will get an email with further instructions</p>
           </Layout>
-        )
+        );
+      default:
     }
   }
 }
-export default Booking
+export default Booking;

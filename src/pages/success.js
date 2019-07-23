@@ -6,9 +6,6 @@ import Logo from "../shantiA.png";
 import { Link } from "gatsby";
 
 class Success extends Component {
-  // componentDidMount() {
-  //   window.location.pathname = "/success/";
-  // }
   render() {
     return (
       <Layout>

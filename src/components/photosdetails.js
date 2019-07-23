@@ -1,7 +1,7 @@
-import React from "react"
-import Photosbook from "./photosbook.js"
-import images from "./images.js"
-import imgStyle from "./imga.module.scss"
+import React from "react";
+import Photosbook from "./photosbook.js";
+import images from "./images.js";
+import imgStyle from "./imga.module.scss";
 
 const PhotosDetails = () => {
   return (
@@ -10,7 +10,7 @@ const PhotosDetails = () => {
         <h3>ROOMS</h3>
       </div>
       <div className={imgStyle.fleX}>
-        {images.map(el => {
+        {images.map((el, i) => {
           return (
             <Photosbook
               img={require(`../../src/img/${el.id}.jpg`)}
@@ -18,12 +18,13 @@ const PhotosDetails = () => {
               price={el.price}
               id={el.id}
               alt={el.title}
+              key={i}
             />
-          )
+          );
         })}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default PhotosDetails
+export default PhotosDetails;

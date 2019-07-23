@@ -19,6 +19,7 @@ class UserForm extends React.Component {
     to: "",
     total: "",
     roomName: "",
+    totalError: "",
     isSubmitted: false,
   };
 
@@ -60,11 +61,29 @@ class UserForm extends React.Component {
           let date2 = new Date(this.state.from).getTime();
           let date = date1 - date2;
           let finalDate = Math.round(date / oneDay);
-          this.setState({
-            total:
-              `total ` + this.state.room * this.state.persons * finalDate + `€`,
-            // displayImg: images.find(img=>{img.id === mapImg[e.target.value]})// find src
-          });
+          let otherName = this.state.name;
+          let otherEmail = this.state.email;
+          if (otherName.length && otherEmail.length > 0) {
+            this.setState({
+              total:
+                `total ` +
+                this.state.room * this.state.persons * finalDate +
+                `€`,
+              // displayImg: images.find(img=>{img.id === mapImg[e.target.value]})// find src
+            });
+          }
+          if (
+            (this.state.name = "") ||
+            (this.state.email = "") ||
+            (this.state.room = "") ||
+            (this.state.persons = "") ||
+            (this.state.to = "") ||
+            (this.state.from = "")
+          ) {
+            this.setState({
+              totalError: `*all the fileds are required`,
+            });
+          }
         }
       }
     );
@@ -72,9 +91,28 @@ class UserForm extends React.Component {
 
   render() {
     const { step } = this.state;
-    const { name, email, persons, room, from, to, total } = this.state;
-    const values = { name, email, persons, room, from, to, total };
-    // const { total } = this.state
+    const {
+      name,
+      email,
+      persons,
+      room,
+      from,
+      to,
+      total,
+      totalError,
+    } = this.state;
+
+    const values = {
+      name,
+      email,
+      persons,
+      room,
+      from,
+      to,
+      total,
+      totalError,
+    };
+
     const isEnabled = total.length > 0;
     switch (step) {
       case 1:
@@ -88,6 +126,7 @@ class UserForm extends React.Component {
         );
       case 2:
         return <Success />;
+      default:
     }
   }
 }
