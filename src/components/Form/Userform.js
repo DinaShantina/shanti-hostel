@@ -72,18 +72,18 @@ class UserForm extends React.Component {
               // displayImg: images.find(img=>{img.id === mapImg[e.target.value]})// find src
             });
           }
-          if (
-            (this.state.name = "") ||
-            (this.state.email = "") ||
-            (this.state.room = "") ||
-            (this.state.persons = "") ||
-            (this.state.to = "") ||
-            (this.state.from = "")
-          ) {
-            this.setState({
-              totalError: `*all the fileds are required`,
-            });
-          }
+          // if (
+          //   (this.state.name = "") ||
+          //   (this.state.email = "") ||
+          //   (this.state.room = "") ||
+          //   (this.state.persons = "") ||
+          //   (this.state.to = "") ||
+          //   (this.state.from = "")
+          // ) {
+          //   this.setState({
+          //     totalError: `*all the fileds are required`,
+          //   });
+          // }
         }
       }
     );

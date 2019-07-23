@@ -5,20 +5,7 @@ import bookingStyle from "./booking.module.scss";
 import PhotosDetails from "../photosdetails";
 // import { redirectTo } from "@reach/router";
 // import images from "../images.js"
-// const initialState = {
-//   name: "",
-//   email: "",
-//   persons: "",
-//   room: "",
-//   from: "",
-//   to: "",
-//   nameError: "",
-//   emailError: "",
-//   personsError: "",
-//   roomError: "",
-//   fromError: "",
-//   toError: "",
-// };
+
 class Booking extends React.Component {
   saveAndContinue = e => {
     e.preventDefault();
