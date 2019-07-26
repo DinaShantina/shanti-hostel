@@ -20,7 +20,6 @@ class UserForm extends React.Component {
     total: "",
     roomName: "",
     totalError: "",
-    isSubmitted: false,
     isEnable: false,
   };
 

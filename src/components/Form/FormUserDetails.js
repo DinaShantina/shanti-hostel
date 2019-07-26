@@ -3,7 +3,6 @@ import Layout from "../layout";
 import Head from "../head";
 import bookingStyle from "./booking.module.scss";
 import PhotosDetails from "../photosdetails";
-// import { redirectTo } from "@reach/router";
 // import images from "../images.js"
 
 class Booking extends React.Component {
