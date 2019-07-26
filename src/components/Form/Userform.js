@@ -21,6 +21,7 @@ class UserForm extends React.Component {
     roomName: "",
     totalError: "",
     isSubmitted: false,
+    isEnable: false,
   };
 
   async nextStep() {
@@ -56,6 +57,9 @@ class UserForm extends React.Component {
           this.state.to &&
           this.state.from
         ) {
+          this.setState({
+            isEnable: true,
+          });
           let oneDay = 1000 * 60 * 60 * 24;
           let date1 = new Date(this.state.to).getTime();
           let date2 = new Date(this.state.from).getTime();
@@ -65,25 +69,14 @@ class UserForm extends React.Component {
           let otherEmail = this.state.email;
           if (otherName.length && otherEmail.length > 0) {
             this.setState({
-              total:
-                `total ` +
-                this.state.room * this.state.persons * finalDate +
-                `€`,
+              total: this.state.room * this.state.persons * finalDate + `€`,
               // displayImg: images.find(img=>{img.id === mapImg[e.target.value]})// find src
             });
           }
-          // if (
-          //   (this.state.name = "") ||
-          //   (this.state.email = "") ||
-          //   (this.state.room = "") ||
-          //   (this.state.persons = "") ||
-          //   (this.state.to = "") ||
-          //   (this.state.from = "")
-          // ) {
-          //   this.setState({
-          //     totalError: `*all the fileds are required`,
-          //   });
-          // }
+        } else {
+          this.setState({
+            isEnable: false,
+          });
         }
       }
     );
@@ -113,7 +106,6 @@ class UserForm extends React.Component {
       totalError,
     };
 
-    const isEnabled = total.length > 0;
     switch (step) {
       case 1:
         return (
@@ -121,7 +113,7 @@ class UserForm extends React.Component {
             nextStep={() => this.nextStep()}
             handleChange={this.handleChange}
             values={values}
-            isEnabled={isEnabled}
+            isEnabled={this.state.isEnable}
           />
         );
       case 2:

@@ -19,11 +19,11 @@ class Booking extends React.Component {
         <div className={bookingStyle.fleX}>
           <PhotosDetails />
         </div>
-
         <div className={bookingStyle.flexForm}>
           <form className={bookingStyle.bookingForm}>
             <h4>YOUR RESERVATION</h4>
-            <p className={bookingStyle.error}>{values.totalError}</p>
+            <p className={bookingStyle.error}>* All fields are required!</p>
+
             <div className="hidden">
               <label>Name:</label>
               <br />
@@ -32,7 +32,6 @@ class Booking extends React.Component {
                 name="name"
                 placeholder="Your Name"
                 defaultValue={values.name}
-                // value={this.state.name}
                 onChange={e => this.props.handleChange(e)}
               />
             </div>
@@ -43,7 +42,6 @@ class Booking extends React.Component {
               <input
                 required
                 placeholder="Your Email"
-                // value={this.state.email}
                 defaultValue={values.email}
                 onChange={e => this.props.handleChange(e)}
                 type="email"
@@ -65,7 +63,6 @@ class Booking extends React.Component {
               How many people? <br />
               <select
                 name="persons"
-                // value={this.state.persons}
                 defaultValue={values.persons}
                 onChange={e => this.props.handleChange(e)}
               >
@@ -89,7 +86,6 @@ class Booking extends React.Component {
               <select
                 id="room"
                 name="room"
-                // value={this.state.room}
                 defaultValue={values.room}
                 onChange={e => this.props.handleChange(e)}
               >
@@ -116,6 +112,7 @@ class Booking extends React.Component {
               <label className={bookingStyle.field}>
                 Check in: <br />
                 <input
+                  required
                   type="date"
                   name="from"
                   defaultValue={values.from}
@@ -126,6 +123,7 @@ class Booking extends React.Component {
               <label className={bookingStyle.field}>
                 Check out: <br />
                 <input
+                  required
                   type="date"
                   name="to"
                   defaultValue={values.to}
@@ -133,9 +131,21 @@ class Booking extends React.Component {
                 />
               </label>
             </div>
-            {values.total !== "" ? (
-              <p className={bookingStyle.total}>{values.total}</p>
-            ) : null}
+            {
+              <p
+                className={
+                  this.props.isEnabled
+                    ? `${bookingStyle.total} ${bookingStyle.opa1}`
+                    : `${bookingStyle.total} ${bookingStyle.opa2}`
+                }
+              >
+                {values.total}
+                <br />
+                <span className={bookingStyle.spanche}>
+                  in the price is included tourist tax
+                </span>
+              </p>
+            }
             <hr />
             <div>
               <button
