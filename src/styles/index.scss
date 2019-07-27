@@ -658,3 +658,8 @@ pre tt:after {
     }
   }
 }
+@media only screen and (max-width: 321px) {
+  .ReactGridGallery_tile-viewport {
+    width: 100% !important;
+  }
+}

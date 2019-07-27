@@ -1,12 +1,12 @@
-import React from "react"
-import Layout from "../components/layout"
-import Head from "../components/head"
-import Gallery from "react-grid-gallery"
-import IMAGES from "../components/allimg"
-import galleryStyle from "../components/imga.module.scss"
+import React from "react";
+import Layout from "../components/layout";
+import Head from "../components/head";
+import Gallery from "react-grid-gallery";
+import IMAGES from "../components/allimg";
+import galleryStyle from "../components/imga.module.scss";
 
 const GalleryA = () => {
-  const images = IMAGES
+  const images = IMAGES;
   return (
     <Layout>
       <Head title="Gallery" />
@@ -17,7 +17,6 @@ const GalleryA = () => {
             enableLightbox={true}
             showLightboxThumbnails={true}
             margin={2}
-            // maxRows={3}
             backdropClosesModal
             // currentImage={3}
             // isOpen={ true}
@@ -25,9 +24,9 @@ const GalleryA = () => {
         )}
       </div>
     </Layout>
-  )
-}
-export default GalleryA
+  );
+};
+export default GalleryA;
 
 //   return(
 //   <div style={{

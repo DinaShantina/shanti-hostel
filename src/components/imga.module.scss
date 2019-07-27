@@ -31,7 +31,6 @@
 }
 .header {
   text-align: center;
-  // color: $violate;
   margin-top: 1rem;
 }
 
@@ -52,6 +51,14 @@
     margin-left: 0 !important;
   }
 }
+
+@media (max-width: 769px) {
+  .image {
+    p:nth-child(2) {
+      font-size: 0.9rem;
+    }
+  }
+}
 @media (max-width: 426px) {
   .fleX {
     flex-wrap: wrap;
@@ -63,5 +70,11 @@
     }
   }
 }
+
 @media (max-width: 321px) {
+  .image {
+    p:nth-child(2) {
+      font-size: 0.8rem;
+    }
+  }
 }
