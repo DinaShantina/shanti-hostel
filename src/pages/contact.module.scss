@@ -166,9 +166,51 @@
 }
 @media (max-width: 768px) {
 }
+@media (max-width: 661px) {
+  .whats {
+    .book p:nth-child(1) {
+      font-size: 1.4rem;
+    }
+  }
+}
+@media (max-width: 604px) {
+  .whats {
+    .book p:nth-child(1) {
+      font-size: 1.3rem;
+    }
+  }
+}
+@media (max-width: 575px) {
+  .whats {
+    .book p:nth-child(1) {
+      font-size: 1.2rem;
+    }
+  }
+}
+@media (max-width: 546px) {
+  .whats {
+    .book p:nth-child(1) {
+      font-size: 1.1rem;
+    }
+  }
+}
 @media (max-width: 522px) {
   .map {
     width: 315px;
+  }
+}
+@media (max-width: 517px) {
+  .whats {
+    .book p:nth-child(1) {
+      font-size: 1rem;
+    }
+  }
+}
+@media (max-width: 444px) {
+  .whats {
+    .icon a {
+      font-size: 3.5rem;
+    }
   }
 }
 // @media (min-width: 426px) {
@@ -213,6 +255,20 @@
     width: 80%;
   }
 }
+@media (max-width: 421px) {
+  .whats {
+    .book p:nth-child(1) {
+      font-size: 0.9rem;
+    }
+  }
+}
+@media (max-width: 379px) {
+  .whats {
+    .book p:nth-child(3) {
+      font-size: 0.8rem;
+    }
+  }
+}
 @media (max-width: 376px) {
   .whats {
     padding: 1rem 0.7rem;
@@ -233,7 +289,23 @@
     }
   }
 }
-
+@media (max-width: 370px) {
+  .whats {
+    .book p:nth-child(1) {
+      font-size: 0.87rem;
+    }
+    .book p:nth-child(2) {
+      font-size: 1.6rem;
+    }
+  }
+}
+@media (max-width: 336px) {
+  .whats {
+    .book p:nth-child(1) {
+      font-size: 0.8rem;
+    }
+  }
+}
 @media (max-width: 321px) {
   .whats {
     padding: 0.5rem;

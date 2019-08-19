@@ -629,6 +629,10 @@ pre tt:after {
   padding: 0;
   width: 100%;
 }
+
+.__react_modal_image__modal_content img {
+  width: 50%;
+}
 .containerSlide {
   padding: 1rem 0rem;
 }
@@ -636,6 +640,11 @@ pre tt:after {
 //   width: 60%;
 //   margin: auto;
 // }
+@media only screen and (max-width: 769px) {
+  .__react_modal_image__modal_content img {
+    width: 90%;
+  }
+}
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;

@@ -1,6 +1,10 @@
 import React from "react";
 import FormUserDetails from "./FormUserDetails";
 import Success from "./Success";
+import First from "../../img/1.jpg";
+import Second from "../../img/2.jpg";
+import Third from "../../img/3.jpg";
+import Fourth from "../../img/4.jpg";
 
 const encode = data => {
   return Object.keys(data)
@@ -69,6 +73,7 @@ class UserForm extends React.Component {
           if (otherName.length && otherEmail.length > 0) {
             this.setState({
               total: this.state.room * this.state.persons * finalDate + `€`,
+
               // displayImg: images.find(img=>{img.id === mapImg[e.target.value]})// find src
             });
           }

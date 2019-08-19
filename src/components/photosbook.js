@@ -1,5 +1,6 @@
 import React from "react";
 import imgStyle from "./imga.module.scss";
+import ModalImage from "react-modal-image";
 
 const Photosbook = props => {
   return (
@@ -7,7 +8,13 @@ const Photosbook = props => {
       {/* <Link to={`/CardDetail/${props.id}`}  > */}
       <div className={imgStyle.detail}>
         <div className={imgStyle.image}>
-          <img src={props.img} alt="rooms" />
+          <ModalImage
+            small={props.img}
+            medium={props.img1}
+            alt={props.title}
+            hideZoom={true}
+            hideDownload={true}
+          />
           <p>{props.title}</p>
           <p className="red-text">{props.price} EUR</p>
         </div>

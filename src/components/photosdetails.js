@@ -14,6 +14,7 @@ const PhotosDetails = () => {
           return (
             <Photosbook
               img={require(`../../src/img/${el.id}.jpg`)}
+              img1={require(`../../src/img/imgL/${el.id}.jpg`)}
               title={el.title}
               price={el.price}
               id={el.id}
