@@ -44,9 +44,9 @@ const AboutPage = () => {
           <br /> <br />
         </p>
         <div className={blogStyles.since}>
-          <p>Dina Damjanovikj</p>
-          <p>Petar Shevchenko</p>
-          <p>Marjan Damjanovikj</p>
+          <p>Dina Damjanovikj,</p>
+          <p>Petar Shevchenko,</p>
+          <p>Marjan Damjanovikj;</p>
         </div>
         <p>
           <Link to="/contact">Contact us</Link>

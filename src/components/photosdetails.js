@@ -7,7 +7,8 @@ const PhotosDetails = () => {
   return (
     <div>
       <div className={imgStyle.header}>
-        <h3>ROOMS</h3>
+        <h3>OUR ROOMS</h3>
+        <p>Choose your type of room for your stay in Shanti Hostel:</p>
       </div>
       <div className={imgStyle.fleX}>
         {images.map((el, i) => {

@@ -1,5 +1,6 @@
 @import "../components/variable.scss";
-
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
 .bgCollage {
   background-image: url("../images/gallery1.jpg");
   background-size: cover;
@@ -16,13 +17,18 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  // padding: 1rem;
+  font-family: "Raleway", sans-serif;
   border-radius: 10px;
+  h1 {
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+  }
   .text {
     padding: 1rem;
     text-align: center;
   }
   .phone {
+    font-family: "Muli", sans-serif;
     a {
       color: $violate;
     }
