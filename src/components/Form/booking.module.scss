@@ -9,7 +9,23 @@
 [type="date"]::-webkit-calendar-picker-indicator {
   opacity: 0;
 }
+.errorForm {
+  opacity: 1;
+  transition: 0.25s;
+  color: red;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: underline;
+  background-color: rgba(0, 0, 0, 0.1);
+  // border-bottom: 1px solid red;
+  padding-bottom: 0.6rem;
 
+  // font-size: 0.9rem;
+}
+.errorForm1 {
+  // opacity: 0;
+  display: none;
+}
 .flexImg {
   display: flex;
   flex-direction: row-reverse;
@@ -99,12 +115,7 @@
       box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1);
     }
   }
-  .error {
-    border-bottom: 1px solid red;
-    padding-bottom: 0.6rem;
-    width: 60%;
-    font-size: 0.9rem;
-  }
+
   .total {
     font-size: 2rem;
     font-weight: 900;

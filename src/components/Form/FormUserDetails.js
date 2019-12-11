@@ -27,7 +27,7 @@ class Booking extends React.Component {
         <div className={bookingStyle.flexForm}>
           <form className={bookingStyle.bookingForm}>
             <h4>YOUR RESERVATION</h4>
-            <p className={bookingStyle.error}>* All fields are required!</p>
+            {/* <p className={bookingStyle.error}>* All fields are required!</p> */}
 
             <div className="hidden">
               <label>Name:</label>
@@ -154,6 +154,11 @@ class Booking extends React.Component {
                 </span>
               </p>
             }
+            {!this.props.isEnabled ? (
+              <p className={bookingStyle.errorForm}>{values.info}</p>
+            ) : (
+              <p className={bookingStyle.errorForm1}>{values.info}</p>
+            )}
             <hr />
             <div>
               <button
@@ -169,5 +174,4 @@ class Booking extends React.Component {
     );
   }
 }
-
 export default Booking;

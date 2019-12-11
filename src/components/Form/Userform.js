@@ -25,6 +25,7 @@ class UserForm extends React.Component {
     totalError: "",
     isEnable: false,
     displayImg: "",
+    info: "All the fields are required",
   };
 
   async nextStep() {
@@ -93,7 +94,7 @@ class UserForm extends React.Component {
           let finalDate = Math.round(date / oneDay);
           let otherName = this.state.name;
           let otherEmail = this.state.email;
-
+          // otherEmail = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
           if (otherName.length && otherEmail.length > 0) {
             this.setState({
               total: this.state.room * this.state.persons * finalDate + `€`,
@@ -122,6 +123,7 @@ class UserForm extends React.Component {
       total,
       totalError,
       displayImg,
+      info,
     } = this.state;
 
     const values = {
@@ -134,6 +136,7 @@ class UserForm extends React.Component {
       total,
       totalError,
       displayImg,
+      info,
     };
 
     switch (step) {
