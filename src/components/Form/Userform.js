@@ -1,10 +1,7 @@
 import React from "react";
 import FormUserDetails from "./FormUserDetails";
 import Success from "./Success";
-// import First from "../../img/1.jpg";
-// import Second from "../../img/2.jpg";
-// import Third from "../../img/3.jpg";
-// import Fourth from "../../img/4.jpg";
+
 const encode = data => {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))

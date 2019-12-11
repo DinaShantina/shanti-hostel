@@ -2,22 +2,22 @@ let images = [
   {
     id: 1,
     title: "8 Bed Dormitory",
-    price: "€10",
+    price: "€9",
   },
   {
     id: 2,
     title: "4 Bed Yellow",
-    price: "€11",
+    price: "€10",
   },
   {
     id: 3,
     title: "4 Bed Orange",
-    price: "€12",
+    price: "€11",
   },
   {
     id: 4,
     title: "Private Double Room",
-    price: "€28",
+    price: "€25",
   },
 ];
 // images od 10

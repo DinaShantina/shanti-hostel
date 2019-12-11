@@ -3,11 +3,6 @@ import Layout from "../layout";
 import Head from "../head";
 import bookingStyle from "./booking.module.scss";
 import PhotosDetails from "../photosdetails";
-// import images from "../images.js";
-// import First from "../../img/1.jpg";
-// import Second from "../../img/2.jpg";
-// import Third from "../../img/3.jpg";
-// import Fourth from "../../img/4.jpg";
 
 class Booking extends React.Component {
   saveAndContinue = e => {
