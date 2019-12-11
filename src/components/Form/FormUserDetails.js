@@ -14,8 +14,10 @@ class Booking extends React.Component {
     e.preventDefault();
     this.props.nextStep();
   };
+
   render() {
     const { values } = this.props;
+    console.log(values.displayImg);
     return (
       <Layout>
         <Head title="Booking" />
@@ -52,63 +54,67 @@ class Booking extends React.Component {
               />
             </div>
             <hr />
-            {/* <img
-              src={First}
-              alt="8bed dorm"
-              style={{
-                width: "40%",
-                float: "right",
-                border: "1px solid white",
-              }}
-            /> */}
-            <div>
-              How many people? <br />
-              <select
-                name="persons"
-                defaultValue={values.persons}
+            <div className={bookingStyle.flexImg}>
+              <img
+                src={`${values.displayImg}`}
                 onChange={e => this.props.handleChange(e)}
-              >
-                <option hidden>Select N persons</option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
-                <option>7</option>
-                <option>8</option>
-                <option>9</option>
-                <option>10</option>
-              </select>
-            </div>
+                alt={values.displayImg}
+                className={
+                  values.displayImg
+                    ? `${bookingStyle.img}`
+                    : `${bookingStyle.imgNone}`
+                }
+              />
 
-            <div>
-              Room type?
-              <br />
-              <select
-                id="room"
-                name="room"
-                defaultValue={values.room}
-                onChange={e => this.props.handleChange(e)}
-              >
-                <option hidden>Select type of room</option>
-                <option name="8bed" value="10">
-                  8 Bed Dorm
-                </option>
-                <option name="4beda" value="11">
-                  4 Bed Yellow Dorm
-                </option>
-                <option name="4bedb" value="12">
-                  4 Bed Orange Dorm
-                </option>
-                <option name="double" value="28">
-                  Private Double Room
-                </option>
-              </select>
-              <div style={{ fontSize: 12, color: "red" }}>
-                {values.roomError}
+              <div className={bookingStyle.selection}>
+                How many people? <br />
+                <select
+                  name="persons"
+                  defaultValue={values.persons}
+                  onChange={e => this.props.handleChange(e)}
+                >
+                  <option hidden>Select N persons</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+                  <option>7</option>
+                  <option>8</option>
+                  <option>9</option>
+                  <option>10</option>
+                </select>
+                <div>
+                  Room type?
+                  <br />
+                  <select
+                    id="room"
+                    name="room"
+                    defaultValue={values.room}
+                    onChange={e => this.props.handleChange(e)}
+                  >
+                    <option hidden>Select type of room</option>
+                    <option name="8bed" value="9">
+                      8 Bed Dorm
+                    </option>
+                    <option name="4beda" value="10">
+                      4 Bed Yellow Dorm
+                    </option>
+                    <option name="4bedb" value="11">
+                      4 Bed Orange Dorm
+                    </option>
+                    <option name="double" value="25">
+                      Private Double Room
+                    </option>
+                  </select>
+                  <div style={{ fontSize: 12, color: "red" }}>
+                    {values.roomError}
+                  </div>
+                </div>
               </div>
             </div>
+
             <hr />
             <div className={bookingStyle.date}>
               <label className={bookingStyle.field}>

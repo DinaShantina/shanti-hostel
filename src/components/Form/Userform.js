@@ -1,11 +1,10 @@
 import React from "react";
 import FormUserDetails from "./FormUserDetails";
 import Success from "./Success";
-import First from "../../img/1.jpg";
-import Second from "../../img/2.jpg";
-import Third from "../../img/3.jpg";
-import Fourth from "../../img/4.jpg";
-
+// import First from "../../img/1.jpg";
+// import Second from "../../img/2.jpg";
+// import Third from "../../img/3.jpg";
+// import Fourth from "../../img/4.jpg";
 const encode = data => {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
@@ -25,12 +24,11 @@ class UserForm extends React.Component {
     roomName: "",
     totalError: "",
     isEnable: false,
+    displayImg: "",
   };
 
   async nextStep() {
-    // e.preventDefault();
     const { step } = this.state;
-
     await fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -46,12 +44,37 @@ class UserForm extends React.Component {
         roomName: e.target.options[e.target.selectedIndex].text,
       });
     }
-    // e.persist()
     this.setState(
       {
         [e.target.name]: e.target.value,
       },
       () => {
+        let img1 = require("../../img/1.jpg");
+        let img2 = require("../../img/2.jpg");
+        let img3 = require("../../img/3.jpg");
+        let img4 = require("../../img/4.jpg");
+
+        if (this.state.room === "9") {
+          this.setState({
+            displayImg: img1,
+          });
+        } else if (this.state.room === "10") {
+          this.setState({
+            displayImg: img2,
+          });
+        } else if (this.state.room === "11") {
+          this.setState({
+            displayImg: img3,
+          });
+        } else if (this.state.room === "25") {
+          this.setState({
+            displayImg: img4,
+          });
+        } else {
+          this.setState({
+            displayImg: null,
+          });
+        }
         if (
           this.state.name &&
           this.state.email &&
@@ -70,11 +93,10 @@ class UserForm extends React.Component {
           let finalDate = Math.round(date / oneDay);
           let otherName = this.state.name;
           let otherEmail = this.state.email;
+
           if (otherName.length && otherEmail.length > 0) {
             this.setState({
               total: this.state.room * this.state.persons * finalDate + `€`,
-
-              // displayImg: images.find(img=>{img.id === mapImg[e.target.value]})// find src
             });
           }
         } else {
@@ -84,6 +106,8 @@ class UserForm extends React.Component {
         }
       }
     );
+    console.log("room", this.state.room);
+    console.log("img", this.state.displayImg);
   };
 
   render() {
@@ -97,6 +121,7 @@ class UserForm extends React.Component {
       to,
       total,
       totalError,
+      displayImg,
     } = this.state;
 
     const values = {
@@ -108,6 +133,7 @@ class UserForm extends React.Component {
       to,
       total,
       totalError,
+      displayImg,
     };
 
     switch (step) {
