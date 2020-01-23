@@ -1,8 +1,8 @@
-import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
-import { FaFacebook, FaInstagram } from "react-icons/fa"
+import React from "react";
+import { graphql, useStaticQuery } from "gatsby";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
 
-import footerStyle from "./footer.module.scss"
+import footerStyle from "./footer.module.scss";
 
 const Footer = () => {
   const data = useStaticQuery(graphql`
@@ -13,7 +13,9 @@ const Footer = () => {
         }
       }
     }
-  `)
+  `);
+
+  let dateUpdate = new Date().getFullYear();
   return (
     <footer className={footerStyle.footer}>
       <div className={footerStyle.icons}>
@@ -24,8 +26,10 @@ const Footer = () => {
           <FaInstagram />
         </a>
       </div>
-      <p>Created by {data.site.siteMetadata.author}, &copy; 2019</p>
+      <p>
+        Created by {data.site.siteMetadata.author}, &copy; {dateUpdate}
+      </p>
     </footer>
-  )
-}
-export default Footer
+  );
+};
+export default Footer;
