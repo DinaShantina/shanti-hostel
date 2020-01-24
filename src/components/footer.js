@@ -15,7 +15,7 @@ const Footer = () => {
     }
   `);
 
-  let dateUpdate = new Date().getFullYear();
+  let yearUpdate = new Date().getFullYear();
   return (
     <footer className={footerStyle.footer}>
       <div className={footerStyle.icons}>
@@ -27,7 +27,7 @@ const Footer = () => {
         </a>
       </div>
       <p>
-        Created by {data.site.siteMetadata.author}, &copy; {dateUpdate}
+        Created by {data.site.siteMetadata.author}, &copy; {yearUpdate}
       </p>
     </footer>
   );
