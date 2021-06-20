@@ -29,8 +29,20 @@
   }
   .phone {
     font-family: "Muli", sans-serif;
+    font-size: 1.5rem;
     a {
+      color: $black;
+    }
+    .whatUp {
+      color: $greenWhatsUp;
+    }
+    .viber {
       color: $violate;
+    }
+    a:hover,
+    .whatUp:hover,
+    .viber:hover {
+      color: red;
     }
   }
   p :last-child {

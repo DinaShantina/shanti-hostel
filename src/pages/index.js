@@ -44,13 +44,13 @@ class IndexPage extends React.Component {
             <a href="viber://contact?number=%2B38970620320">
               <FaViber className={layoutStyle.viber} />
             </a>
-            <a href="https://api.whatsapp.com/send?phone=38970620320">
+            <a href="https://api.whatsapp.com/send?phone=38978708004">
               <FaWhatsapp className={layoutStyle.viber} />
             </a>
           </div>
           <div className={layoutStyle.book}>
             <p>BOOK WITH VIBER OR WHATSAPP</p>
-            <p>+389 70 620 320</p>
+            <p>+389 78 708 004</p>
             <p>EASY, FAST &amp; WITH -10% DISCOUNT</p>
           </div>
         </div>

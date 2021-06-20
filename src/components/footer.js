@@ -22,7 +22,7 @@ const Footer = () => {
         <a href="https://www.facebook.com/shantihostels/" target="__blank">
           <FaFacebook />
         </a>
-        <a href="https://www.instagram.com/shantihostel/" target="__blank">
+        <a href="https://www.instagram.com/shantihostelskopje/" target="__blank">
           <FaInstagram />
         </a>
       </div>

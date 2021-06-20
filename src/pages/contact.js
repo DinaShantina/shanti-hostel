@@ -5,7 +5,7 @@ import contactStyles from "./contact.module.scss";
 import Staff from "../images/staff.jpg";
 import Iframe from "react-iframe";
 // import Phone from "../phone.png"
-
+import { FaViber, FaWhatsapp } from "react-icons/fa";
 import {
   FaPhoneSquare,
   FaSearchLocation,
@@ -20,10 +20,16 @@ const ContactPage = () => {
         <div className={contactStyles.text}>
           <h1>Contact Us</h1>
           <p className={contactStyles.phone}>
-            <a href="tel: +389 2 60 90 807">
+            <a href="tel: +38978708004">
               <FaPhoneSquare />
             </a>
-            &nbsp;+389 2 60 90 807
+            <a href="viber://contact?number=%2B38970620320">
+              <FaViber className={contactStyles.viber} />
+            </a>
+            <a href="https://api.whatsapp.com/send?phone=38978708004">
+              <FaWhatsapp className={contactStyles.whatUp} />
+            </a>
+            &nbsp;+389 78 708 004
           </p>
           <p>
             <FaSearchLocation />
